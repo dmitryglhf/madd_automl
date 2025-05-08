@@ -71,10 +71,11 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
     logger.info(f"Data path: {data_path}")
     logger.info(f"Save path: {path_to_save}")
     logger.info("Disbalance of classes:")
-    logger.info(f"{df_ds[target].value_counts(normalize=True)}")
-    logger.info('-' * 50)
 
     df_ds = pd.read_csv(data_path)
+    logger.info(f"{df_ds[target].value_counts(normalize=True)}")
+
+    logger.info('-' * 50)
 
 
     X, y = df_ds.drop(columns=target), df_ds[target]
