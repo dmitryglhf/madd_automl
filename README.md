@@ -1,3 +1,41 @@
+Таблица из статьи:
+| Case                 | Model          | Accuracy | F1 score |
+|----------------------|----------------|----------|----------|
+|                      | **MADDAutoML** | **0.951** | **0.914** |
+| Alzheimer's disease  | CatBoost       | 0.810    | 0.810    |
+|                      | Random Forest  | 0.822    | 0.829    |
+|                      | XGBoost        | 0.803    | 0.803    |
+|                      | **Extra Trees**| **0.823**| **0.829**|
+|                      | LightGBM       | 0.810    | 0.820    |
+| Mupltiple sclerosis  | CatBoost       | 0.865    | 0.905    |
+|                      | MADDAutoML     | 0.877    | 0.913    |
+|                      | **Random Forest**| **0.887**| **0.920**|
+|                      | XGBoost        | 0.876    | 0.912    |
+|                      | Extra Trees    | 0.886    | 0.919    |
+|                      | LightGBM       | 0.885    | 0.918    |
+| Parkinson's disease  | **CatBoost**   | **0.910**| **0.920**|
+|                      | Random Forest  | 0.890    | 0.900    |
+|                      | XGBoost        | 0.910    | 0.910    |
+|                      | Extra Trees    | 0.890    | 0.900    |
+|                      | LightGBM       | 0.900    | 0.910    |
+| Dyslipidemia         | **CatBoost**   | **0.778**| **0.818**|
+|                      | Random Forest  | 0.775    | 0.813    |
+|                      | XGBoost        | 0.725    | 0.772    |
+|                      | Extra Trees    | 0.750    | 0.782    |
+|                      | LightGBM       | 0.725    | 0.775    |
+| Drug resistance      | **CatBoost**   | **0.838**| **0.848**|
+|                      | Random Forest  | 0.828    | 0.836    |
+|                      | XGBoost        | 0.823    | 0.826    |
+|                      | Extra Trees    | 0.837    | 0.844    |
+|                      | LightGBM       | 0.832    | 0.835    |
+| Lung cancer          | CatBoost       | 0.822    | 0.822    |
+|                      | Random Forest  | 0.838    | 0.835    |
+|                      | XGBoost        | 0.827    | 0.826    |
+|                      | **Extra Trees**| **0.843**| **0.842**|
+|                      | LightGBM       | 0.811    | 0.809    |
+
+
+Наша таблица:
 
 | Датасет                     | Модель                                   | Accuracy (1024) | F1-score (1024) | Accuracy (2048/512) | F1-score (2048/512) |
 |-----------------------------|------------------------------------------|-----------------|------------------|---------------------|---------------------|
