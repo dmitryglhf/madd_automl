@@ -1,0 +1,901 @@
+nohup: ignoring input
+2025-05-11 12:25:36,184 - MADD - INFO - Dataset: alz_1024
+2025-05-11 12:25:36,184 - Dataset: alz_1024
+2025-05-11 12:25:36,184 - MADD - INFO - Target: IC50
+2025-05-11 12:25:36,184 - Target: IC50
+2025-05-11 12:25:36,184 - MADD - INFO - Task: classification
+2025-05-11 12:25:36,184 - Task: classification
+2025-05-11 12:25:36,184 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\alz_1024.csv
+2025-05-11 12:25:36,184 - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\alz_1024.csv
+2025-05-11 12:25:36,184 - MADD - INFO - Save path: logs\alz_1024
+2025-05-11 12:25:36,184 - Save path: logs\alz_1024
+2025-05-11 12:25:36,184 - MADD - INFO - Disbalance of classes:
+2025-05-11 12:25:36,184 - Disbalance of classes:
+2025-05-11 12:25:36,251 - MADD - INFO - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 12:25:36,251 - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 12:25:36,251 - MADD - INFO - --------------------------------------------------
+2025-05-11 12:25:36,251 - --------------------------------------------------
+2025-05-11 12:25:36,534 - Topological features operation requires extra dependencies for time series forecasting, which are not installed. It can infuence the performance. Please install it by 'pip install fedot[extra]'
+2025-05-11 12:27:41,468 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:27:42,296 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 12:27:43,366 - ApiComposer - Initial pipeline was fitted in 124.3 sec.
+2025-05-11 12:27:43,366 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 621.4 sec.
+2025-05-11 12:27:43,366 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 12:27:43,382 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 12:27:43,431 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 621.429895 sec.
+2025-05-11 12:27:43,451 - ApiComposer - Hyperparameters tuning started with 3 min. timeout
+2025-05-11 12:29:48,879 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:29:49,799 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 12:31:54,289 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:31:55,232 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 12:33:58,163 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:33:59,072 - Blending - Models weights: {'cb_bag': 0.203042, 'lgbm_bag': 0.792369, 'xgb_bag': 0.004589}
+2025-05-11 12:36:02,652 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:36:03,540 - Blending - Models weights: {'cb_bag': 0.043159, 'lgbm_bag': 0.900131, 'xgb_bag': 0.05671}
+2025-05-11 12:38:09,777 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:38:10,703 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 12:38:11,690 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 12:38:11,690 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 12:40:18,077 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:40:19,046 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 12:42:26,583 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:42:27,507 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 12:44:35,113 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:44:36,060 - Blending - Models weights: {'cb_bag': 0.203042, 'lgbm_bag': 0.792369, 'xgb_bag': 0.004589}
+2025-05-11 12:46:43,206 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:46:44,134 - Blending - Models weights: {'cb_bag': 0.043159, 'lgbm_bag': 0.900131, 'xgb_bag': 0.05671}
+2025-05-11 12:48:52,435 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:48:53,365 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 12:48:54,385 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 12:48:54,385 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 12:48:54,400 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 12:48:54,478 - ApiComposer - Model generation finished
+2025-05-11 12:51:08,630 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:51:09,443 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 12:51:09,445 - FEDOT logger - Final pipeline was fitted
+2025-05-11 12:51:09,445 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 12:51:09,867 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 12:51:10,036 - MADD - INFO - Accuracy score: 0.956081081081081
+2025-05-11 12:51:10,036 - MADD - INFO - F-1 score: 0.9742574257425742
+2025-05-11 12:51:10,205 - MADD - INFO - Pipeline saved to logs\alz_1024
+
+2025-05-11 12:51:10,205 - MADD - INFO - ==================================================
+2025-05-11 12:51:10,205 - MADD - INFO - 
+
+2025-05-11 12:51:10,288 - MADD - INFO - Dataset: cancer_clear_1024
+2025-05-11 12:51:10,288 - MADD - INFO - Target: IC50
+2025-05-11 12:51:10,288 - MADD - INFO - Task: classification
+2025-05-11 12:51:10,288 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\cancer_clear_1024.csv
+2025-05-11 12:51:10,288 - MADD - INFO - Save path: logs\cancer_clear_1024
+2025-05-11 12:51:10,289 - MADD - INFO - Disbalance of classes:
+2025-05-11 12:51:10,327 - MADD - INFO - IC50
+0    0.521173
+1    0.478827
+Name: proportion, dtype: float64
+2025-05-11 12:51:10,327 - MADD - INFO - --------------------------------------------------
+2025-05-11 12:52:46,974 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:52:47,635 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 12:52:48,548 - ApiComposer - Initial pipeline was fitted in 96.9 sec.
+2025-05-11 12:52:48,548 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 484.6 sec.
+2025-05-11 12:52:48,548 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 12:52:48,562 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 12:52:48,608 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 484.554735 sec.
+2025-05-11 12:52:48,620 - ApiComposer - Hyperparameters tuning started with 3 min. timeout
+2025-05-11 12:54:23,440 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:54:24,155 - Blending - Models weights: {'cb_bag': 0.223324, 'lgbm_bag': 0.599289, 'xgb_bag': 0.177387}
+2025-05-11 12:55:58,886 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:55:59,721 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 12:57:34,683 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:57:35,429 - Blending - Models weights: {'cb_bag': 0.313888, 'lgbm_bag': 0.555818, 'xgb_bag': 0.130294}
+2025-05-11 12:59:09,501 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 12:59:10,259 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 13:00:45,050 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:00:45,949 - Blending - Models weights: {'cb_bag': 0.07725, 'lgbm_bag': 0.871254, 'xgb_bag': 0.051496}
+2025-05-11 13:00:46,856 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 13:00:46,860 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 13:02:21,674 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:02:22,445 - Blending - Models weights: {'cb_bag': 0.223324, 'lgbm_bag': 0.599289, 'xgb_bag': 0.177387}
+2025-05-11 13:03:57,861 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:03:58,632 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 13:05:32,245 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:05:33,029 - Blending - Models weights: {'cb_bag': 0.313888, 'lgbm_bag': 0.555818, 'xgb_bag': 0.130294}
+2025-05-11 13:07:07,175 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:07:07,964 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 13:08:43,694 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:08:44,496 - Blending - Models weights: {'cb_bag': 0.07725, 'lgbm_bag': 0.871254, 'xgb_bag': 0.051496}
+2025-05-11 13:08:45,355 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 13:08:45,356 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 13:08:45,359 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 13:08:45,457 - ApiComposer - Model generation finished
+2025-05-11 13:10:22,296 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:10:23,003 - Blending - Models weights: {'cb_bag': 0.026499, 'lgbm_bag': 0.828331, 'xgb_bag': 0.14517}
+2025-05-11 13:10:23,003 - FEDOT logger - Final pipeline was fitted
+2025-05-11 13:10:23,003 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 13:10:23,379 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 13:10:23,517 - MADD - INFO - Accuracy score: 0.7689530685920578
+2025-05-11 13:10:23,517 - MADD - INFO - F-1 score: 0.7647058823529411
+2025-05-11 13:10:23,689 - MADD - INFO - Pipeline saved to logs\cancer_clear_1024
+
+2025-05-11 13:10:23,689 - MADD - INFO - ==================================================
+2025-05-11 13:10:23,689 - MADD - INFO - 
+
+2025-05-11 13:10:23,767 - MADD - INFO - Dataset: dislip_1024
+2025-05-11 13:10:23,768 - MADD - INFO - Target: IC50
+2025-05-11 13:10:23,768 - MADD - INFO - Task: classification
+2025-05-11 13:10:23,768 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\dislip_1024.csv
+2025-05-11 13:10:23,768 - MADD - INFO - Save path: logs\dislip_1024
+2025-05-11 13:10:23,768 - MADD - INFO - Disbalance of classes:
+2025-05-11 13:10:23,793 - MADD - INFO - IC50
+0    0.643879
+1    0.356121
+Name: proportion, dtype: float64
+2025-05-11 13:10:23,793 - MADD - INFO - --------------------------------------------------
+2025-05-11 13:11:41,998 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:11:42,663 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 13:11:43,576 - ApiComposer - Initial pipeline was fitted in 78.7 sec.
+2025-05-11 13:11:43,576 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 393.5 sec.
+2025-05-11 13:11:43,577 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 13:11:43,591 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 13:11:43,638 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 393.45576 sec.
+2025-05-11 13:11:43,645 - ApiComposer - Hyperparameters tuning started with 4 min. timeout
+2025-05-11 13:13:01,796 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:13:02,486 - Blending - Models weights: {'cb_bag': 0.31061, 'lgbm_bag': 0.683446, 'xgb_bag': 0.005943}
+2025-05-11 13:14:22,127 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:14:22,832 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:15:43,249 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:15:43,976 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:17:03,793 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:17:04,539 - Blending - Models weights: {'cb_bag': 0.203042, 'lgbm_bag': 0.792369, 'xgb_bag': 0.004589}
+2025-05-11 13:18:23,831 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:18:24,586 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 13:18:25,414 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 13:18:25,415 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 13:19:43,558 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:19:44,348 - Blending - Models weights: {'cb_bag': 0.31061, 'lgbm_bag': 0.683446, 'xgb_bag': 0.005943}
+2025-05-11 13:21:05,143 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:21:05,925 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:22:25,700 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:22:26,494 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:23:46,399 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:23:47,182 - Blending - Models weights: {'cb_bag': 0.203042, 'lgbm_bag': 0.792369, 'xgb_bag': 0.004589}
+2025-05-11 13:25:06,186 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:25:06,993 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 13:25:07,825 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 13:25:07,826 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 13:25:07,830 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 13:25:07,928 - ApiComposer - Model generation finished
+2025-05-11 13:26:30,641 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:26:31,372 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:26:31,374 - FEDOT logger - Final pipeline was fitted
+2025-05-11 13:26:31,374 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 13:26:31,753 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 13:26:31,892 - MADD - INFO - Accuracy score: 0.7513227513227513
+2025-05-11 13:26:31,893 - MADD - INFO - F-1 score: 0.6887417218543046
+2025-05-11 13:26:32,069 - MADD - INFO - Pipeline saved to logs\dislip_1024
+
+2025-05-11 13:26:32,070 - MADD - INFO - ==================================================
+2025-05-11 13:26:32,070 - MADD - INFO - 
+
+2025-05-11 13:26:32,141 - MADD - INFO - Dataset: parkinson_1024
+2025-05-11 13:26:32,142 - MADD - INFO - Target: IC50
+2025-05-11 13:26:32,142 - MADD - INFO - Task: classification
+2025-05-11 13:26:32,142 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\parkinson_1024.csv
+2025-05-11 13:26:32,142 - MADD - INFO - Save path: logs\parkinson_1024
+2025-05-11 13:26:32,142 - MADD - INFO - Disbalance of classes:
+2025-05-11 13:26:32,232 - MADD - INFO - IC50
+0    0.575153
+1    0.424847
+Name: proportion, dtype: float64
+2025-05-11 13:26:32,232 - MADD - INFO - --------------------------------------------------
+2025-05-11 13:28:40,092 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:28:40,762 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 13:28:41,868 - ApiComposer - Initial pipeline was fitted in 127.0 sec.
+2025-05-11 13:28:41,868 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 634.8 sec.
+2025-05-11 13:28:41,869 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 13:28:41,883 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 13:28:41,928 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 634.75602 sec.
+2025-05-11 13:28:41,952 - ApiComposer - Hyperparameters tuning started with 3 min. timeout
+2025-05-11 13:30:47,960 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:30:48,678 - Blending - Models weights: {'cb_bag': 0.156604, 'lgbm_bag': 0.781757, 'xgb_bag': 0.061639}
+2025-05-11 13:32:52,635 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:32:53,334 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 13:35:01,259 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:35:01,990 - Blending - Models weights: {'cb_bag': 0.25407, 'lgbm_bag': 0.659659, 'xgb_bag': 0.086272}
+2025-05-11 13:37:09,508 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:37:10,253 - Blending - Models weights: {'cb_bag': 0.25638, 'lgbm_bag': 0.611892, 'xgb_bag': 0.131728}
+2025-05-11 13:39:16,367 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:39:17,134 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:39:18,170 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 13:39:18,170 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 13:41:24,096 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:41:24,868 - Blending - Models weights: {'cb_bag': 0.156604, 'lgbm_bag': 0.781757, 'xgb_bag': 0.061639}
+2025-05-11 13:43:33,928 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:43:34,699 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 13:45:40,475 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:45:41,283 - Blending - Models weights: {'cb_bag': 0.25407, 'lgbm_bag': 0.659659, 'xgb_bag': 0.086272}
+2025-05-11 13:47:50,137 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:47:50,957 - Blending - Models weights: {'cb_bag': 0.25638, 'lgbm_bag': 0.611892, 'xgb_bag': 0.131728}
+2025-05-11 13:49:58,168 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:49:58,990 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:50:00,075 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 13:50:00,076 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 13:50:00,080 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 13:50:00,185 - ApiComposer - Model generation finished
+2025-05-11 13:52:16,267 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:52:16,999 - Blending - Models weights: {'cb_bag': 0.25407, 'lgbm_bag': 0.659659, 'xgb_bag': 0.086272}
+2025-05-11 13:52:16,999 - FEDOT logger - Final pipeline was fitted
+2025-05-11 13:52:16,999 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 13:52:17,457 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 13:52:17,597 - MADD - INFO - Accuracy score: 0.8467432950191571
+2025-05-11 13:52:17,601 - MADD - INFO - F-1 score: 0.8314606741573034
+2025-05-11 13:52:17,767 - MADD - INFO - Pipeline saved to logs\parkinson_1024
+
+2025-05-11 13:52:17,767 - MADD - INFO - ==================================================
+2025-05-11 13:52:17,767 - MADD - INFO - 
+
+2025-05-11 13:52:17,847 - MADD - INFO - Dataset: resistance_1024
+2025-05-11 13:52:17,847 - MADD - INFO - Target: IC50
+2025-05-11 13:52:17,847 - MADD - INFO - Task: classification
+2025-05-11 13:52:17,847 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\resistance_1024.csv
+2025-05-11 13:52:17,847 - MADD - INFO - Save path: logs\resistance_1024
+2025-05-11 13:52:17,847 - MADD - INFO - Disbalance of classes:
+2025-05-11 13:52:17,887 - MADD - INFO - IC50
+1    0.697935
+0    0.302065
+Name: proportion, dtype: float64
+2025-05-11 13:52:17,887 - MADD - INFO - --------------------------------------------------
+2025-05-11 13:54:14,111 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:54:14,781 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 13:54:15,718 - ApiComposer - Initial pipeline was fitted in 116.3 sec.
+2025-05-11 13:54:15,721 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 581.5 sec.
+2025-05-11 13:54:15,721 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 13:54:15,733 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 13:54:15,783 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 581.52531 sec.
+2025-05-11 13:54:15,796 - ApiComposer - Hyperparameters tuning started with 3 min. timeout
+2025-05-11 13:56:11,042 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:56:11,743 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 13:57:53,176 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:57:53,879 - Blending - Models weights: {'cb_bag': 0.12602, 'lgbm_bag': 0.862515, 'xgb_bag': 0.011465}
+2025-05-11 13:59:49,267 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 13:59:49,991 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 14:01:43,201 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:01:43,941 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 14:03:37,635 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:03:38,369 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 14:03:39,229 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 14:03:39,229 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 14:05:32,018 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:05:32,779 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 14:07:14,516 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:07:15,271 - Blending - Models weights: {'cb_bag': 0.12602, 'lgbm_bag': 0.862515, 'xgb_bag': 0.011465}
+2025-05-11 14:09:05,876 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:09:06,618 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 14:10:56,883 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:10:57,682 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 14:12:51,083 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:12:51,847 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 14:12:52,743 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 14:12:52,743 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 14:12:52,743 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 14:12:52,843 - ApiComposer - Model generation finished
+2025-05-11 14:14:50,118 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:14:50,838 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 14:14:50,838 - FEDOT logger - Final pipeline was fitted
+2025-05-11 14:14:50,838 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 14:14:51,239 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 14:14:51,380 - MADD - INFO - Accuracy score: 0.830945558739255
+2025-05-11 14:14:51,381 - MADD - INFO - F-1 score: 0.8876190476190476
+2025-05-11 14:14:51,559 - MADD - INFO - Pipeline saved to logs\resistance_1024
+
+2025-05-11 14:14:51,559 - MADD - INFO - ==================================================
+2025-05-11 14:14:51,559 - MADD - INFO - 
+
+2025-05-11 14:14:51,640 - MADD - INFO - Dataset: skl_1024
+2025-05-11 14:14:51,640 - MADD - INFO - Target: IC50
+2025-05-11 14:14:51,640 - MADD - INFO - Task: classification
+2025-05-11 14:14:51,640 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\skl_1024.csv
+2025-05-11 14:14:51,641 - MADD - INFO - Save path: logs\skl_1024
+2025-05-11 14:14:51,641 - MADD - INFO - Disbalance of classes:
+2025-05-11 14:14:51,784 - MADD - INFO - IC50
+1    0.673194
+0    0.326806
+Name: proportion, dtype: float64
+2025-05-11 14:14:51,784 - MADD - INFO - --------------------------------------------------
+2025-05-11 14:17:51,851 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:17:52,501 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 14:17:53,740 - ApiComposer - Initial pipeline was fitted in 177.6 sec.
+2025-05-11 14:17:53,740 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 888.0 sec.
+2025-05-11 14:17:53,740 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 14:17:53,756 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 14:17:53,802 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 888.034685 sec.
+2025-05-11 14:17:53,849 - ApiComposer - Hyperparameters tuning started with 2 min. timeout
+2025-05-11 14:20:49,863 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:20:50,559 - Blending - Models weights: {'cb_bag': 0.227186, 'lgbm_bag': 0.70182, 'xgb_bag': 0.070993}
+2025-05-11 14:23:49,253 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:23:50,225 - Blending - Models weights: {'cb_bag': 0.316513, 'lgbm_bag': 0.544913, 'xgb_bag': 0.138574}
+2025-05-11 14:27:01,905 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:27:02,642 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 14:30:06,348 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:30:07,090 - Blending - Models weights: {'cb_bag': 0.254501, 'lgbm_bag': 0.705287, 'xgb_bag': 0.040212}
+2025-05-11 14:33:11,933 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:33:12,681 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 14:33:13,907 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 14:33:13,908 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 14:36:21,346 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:36:22,120 - Blending - Models weights: {'cb_bag': 0.227186, 'lgbm_bag': 0.70182, 'xgb_bag': 0.070993}
+2025-05-11 14:39:26,314 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:39:27,095 - Blending - Models weights: {'cb_bag': 0.316513, 'lgbm_bag': 0.544913, 'xgb_bag': 0.138574}
+2025-05-11 14:42:37,121 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:42:37,906 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 14:45:47,287 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:45:48,079 - Blending - Models weights: {'cb_bag': 0.254501, 'lgbm_bag': 0.705287, 'xgb_bag': 0.040212}
+2025-05-11 14:48:54,477 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:48:55,253 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 14:48:56,549 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 14:48:56,549 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 14:48:56,553 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 14:48:56,645 - ApiComposer - Model generation finished
+2025-05-11 14:51:51,686 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:51:52,446 - Blending - Models weights: {'cb_bag': 0.477899, 'lgbm_bag': 0.518677, 'xgb_bag': 0.003424}
+2025-05-11 14:51:52,449 - FEDOT logger - Final pipeline was fitted
+2025-05-11 14:51:52,449 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 14:51:53,012 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 14:51:53,147 - MADD - INFO - Accuracy score: 0.8839738941261784
+2025-05-11 14:51:53,148 - MADD - INFO - F-1 score: 0.9181166837256909
+2025-05-11 14:51:53,324 - MADD - INFO - Pipeline saved to logs\skl_1024
+
+2025-05-11 14:51:53,324 - MADD - INFO - ==================================================
+2025-05-11 14:51:53,324 - MADD - INFO - 
+
+2025-05-11 14:51:53,408 - MADD - INFO - Dataset: alz_2048
+2025-05-11 14:51:53,409 - MADD - INFO - Target: IC50
+2025-05-11 14:51:53,409 - MADD - INFO - Task: classification
+2025-05-11 14:51:53,409 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\alz_2048.csv
+2025-05-11 14:51:53,409 - MADD - INFO - Save path: logs\alz_2048
+2025-05-11 14:51:53,409 - MADD - INFO - Disbalance of classes:
+2025-05-11 14:51:53,561 - MADD - INFO - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 14:51:53,561 - MADD - INFO - --------------------------------------------------
+2025-05-11 14:54:51,827 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:54:52,508 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 14:54:54,499 - ApiComposer - Initial pipeline was fitted in 176.6 sec.
+2025-05-11 14:54:54,499 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 883.2 sec.
+2025-05-11 14:54:54,499 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 14:54:54,515 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 14:54:54,561 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 883.17503 sec.
+2025-05-11 14:54:54,579 - ApiComposer - Hyperparameters tuning started with 2 min. timeout
+2025-05-11 14:57:50,418 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 14:57:51,137 - Blending - Models weights: {'cb_bag': 0.045552, 'lgbm_bag': 0.948052, 'xgb_bag': 0.006396}
+2025-05-11 15:00:47,285 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:00:48,052 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 15:03:41,027 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:03:41,797 - Blending - Models weights: {'cb_bag': 0.306969, 'lgbm_bag': 0.593012, 'xgb_bag': 0.100019}
+2025-05-11 15:06:34,581 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:06:35,329 - Blending - Models weights: {'cb_bag': 0.01238, 'lgbm_bag': 0.986571, 'xgb_bag': 0.001049}
+2025-05-11 15:09:30,189 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:09:30,939 - Blending - Models weights: {'cb_bag': 0.203042, 'lgbm_bag': 0.792369, 'xgb_bag': 0.004589}
+2025-05-11 15:09:32,881 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 15:09:32,882 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 15:12:25,955 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:12:26,752 - Blending - Models weights: {'cb_bag': 0.045552, 'lgbm_bag': 0.948052, 'xgb_bag': 0.006396}
+2025-05-11 15:15:25,353 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:15:26,141 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 15:18:21,408 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:18:22,196 - Blending - Models weights: {'cb_bag': 0.306969, 'lgbm_bag': 0.593012, 'xgb_bag': 0.100019}
+2025-05-11 15:21:17,543 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:21:18,341 - Blending - Models weights: {'cb_bag': 0.01238, 'lgbm_bag': 0.986571, 'xgb_bag': 0.001049}
+2025-05-11 15:24:08,155 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:24:08,954 - Blending - Models weights: {'cb_bag': 0.203042, 'lgbm_bag': 0.792369, 'xgb_bag': 0.004589}
+2025-05-11 15:24:10,907 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 15:24:10,907 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 15:24:10,911 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 15:24:11,005 - ApiComposer - Model generation finished
+2025-05-11 15:27:14,472 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:27:15,250 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 15:27:15,252 - FEDOT logger - Final pipeline was fitted
+2025-05-11 15:27:15,252 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 15:27:16,146 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 15:27:16,294 - MADD - INFO - Accuracy score: 0.9459459459459459
+2025-05-11 15:27:16,295 - MADD - INFO - F-1 score: 0.9683168316831683
+2025-05-11 15:27:16,573 - MADD - INFO - Pipeline saved to logs\alz_2048
+
+2025-05-11 15:27:16,574 - MADD - INFO - ==================================================
+2025-05-11 15:27:16,574 - MADD - INFO - 
+
+2025-05-11 15:27:16,671 - MADD - INFO - Dataset: cancer_clear_2048
+2025-05-11 15:27:16,671 - MADD - INFO - Target: IC50
+2025-05-11 15:27:16,671 - MADD - INFO - Task: classification
+2025-05-11 15:27:16,672 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\cancer_clear_2048.csv
+2025-05-11 15:27:16,672 - MADD - INFO - Save path: logs\cancer_clear_2048
+2025-05-11 15:27:16,672 - MADD - INFO - Disbalance of classes:
+2025-05-11 15:27:16,757 - MADD - INFO - IC50
+0    0.521173
+1    0.478827
+Name: proportion, dtype: float64
+2025-05-11 15:27:16,758 - MADD - INFO - --------------------------------------------------
+2025-05-11 15:29:49,927 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:29:50,594 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 15:29:52,511 - ApiComposer - Initial pipeline was fitted in 152.9 sec.
+2025-05-11 15:29:52,512 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 764.4 sec.
+2025-05-11 15:29:52,512 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 15:29:52,528 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 15:29:52,574 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 764.396125 sec.
+2025-05-11 15:29:52,584 - ApiComposer - Hyperparameters tuning started with 2 min. timeout
+2025-05-11 15:32:18,017 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:32:18,729 - Blending - Models weights: {'cb_bag': 0.327506, 'lgbm_bag': 0.573298, 'xgb_bag': 0.099196}
+2025-05-11 15:34:48,259 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:34:48,979 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 15:37:18,672 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:37:19,408 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 15:39:49,201 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:39:49,950 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 15:42:19,983 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:42:20,749 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 15:42:22,402 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 15:42:22,402 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 15:44:48,505 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:44:49,281 - Blending - Models weights: {'cb_bag': 0.327506, 'lgbm_bag': 0.573298, 'xgb_bag': 0.099196}
+2025-05-11 15:47:20,225 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:47:21,000 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 15:49:51,075 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:49:51,870 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 15:52:20,916 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:52:21,712 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 15:54:51,916 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:54:52,723 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 15:54:54,402 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 15:54:54,403 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 15:54:54,407 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 15:54:54,499 - ApiComposer - Model generation finished
+2025-05-11 15:57:32,024 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:57:32,780 - Blending - Models weights: {'cb_bag': 0.156595, 'lgbm_bag': 0.723364, 'xgb_bag': 0.120042}
+2025-05-11 15:57:32,782 - FEDOT logger - Final pipeline was fitted
+2025-05-11 15:57:32,783 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 15:57:33,530 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 15:57:33,672 - MADD - INFO - Accuracy score: 0.7833935018050542
+2025-05-11 15:57:33,673 - MADD - INFO - F-1 score: 0.7777777777777778
+2025-05-11 15:57:33,946 - MADD - INFO - Pipeline saved to logs\cancer_clear_2048
+
+2025-05-11 15:57:33,947 - MADD - INFO - ==================================================
+2025-05-11 15:57:33,947 - MADD - INFO - 
+
+2025-05-11 15:57:34,028 - MADD - INFO - Dataset: dislip_2048
+2025-05-11 15:57:34,028 - MADD - INFO - Target: IC50
+2025-05-11 15:57:34,028 - MADD - INFO - Task: classification
+2025-05-11 15:57:34,029 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\dislip_2048.csv
+2025-05-11 15:57:34,029 - MADD - INFO - Save path: logs\dislip_2048
+2025-05-11 15:57:34,029 - MADD - INFO - Disbalance of classes:
+2025-05-11 15:57:34,092 - MADD - INFO - IC50
+0    0.643879
+1    0.356121
+Name: proportion, dtype: float64
+2025-05-11 15:57:34,092 - MADD - INFO - --------------------------------------------------
+2025-05-11 15:59:21,036 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 15:59:21,707 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 15:59:23,338 - ApiComposer - Initial pipeline was fitted in 106.9 sec.
+2025-05-11 15:59:23,339 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 534.7 sec.
+2025-05-11 15:59:23,339 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 15:59:23,355 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 15:59:23,401 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 534.692695 sec.
+2025-05-11 15:59:23,409 - ApiComposer - Hyperparameters tuning started with 3 min. timeout
+2025-05-11 16:01:06,172 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:01:06,877 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 16:02:51,173 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:02:51,901 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:04:45,459 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:04:46,192 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:06:30,209 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:06:30,956 - Blending - Models weights: {'cb_bag': 0.188739, 'lgbm_bag': 0.75427, 'xgb_bag': 0.056991}
+2025-05-11 16:08:23,291 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:08:24,051 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:08:25,623 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 16:08:25,624 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 16:10:08,732 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:10:09,500 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 16:11:53,031 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:11:53,809 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:13:47,810 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:13:48,604 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:15:32,194 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:15:32,980 - Blending - Models weights: {'cb_bag': 0.188739, 'lgbm_bag': 0.75427, 'xgb_bag': 0.056991}
+2025-05-11 16:17:25,537 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:17:26,341 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:17:27,967 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 16:17:27,967 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 16:17:27,971 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 16:17:28,062 - ApiComposer - Model generation finished
+2025-05-11 16:19:18,356 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:19:19,110 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 16:19:19,112 - FEDOT logger - Final pipeline was fitted
+2025-05-11 16:19:19,112 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 16:19:19,851 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 16:19:19,993 - MADD - INFO - Accuracy score: 0.7513227513227513
+2025-05-11 16:19:19,994 - MADD - INFO - F-1 score: 0.6845637583892618
+2025-05-11 16:19:20,264 - MADD - INFO - Pipeline saved to logs\dislip_2048
+
+2025-05-11 16:19:20,264 - MADD - INFO - ==================================================
+2025-05-11 16:19:20,264 - MADD - INFO - 
+
+2025-05-11 16:19:20,338 - MADD - INFO - Dataset: parkinson_2048
+2025-05-11 16:19:20,338 - MADD - INFO - Target: IC50
+2025-05-11 16:19:20,339 - MADD - INFO - Task: classification
+2025-05-11 16:19:20,339 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\parkinson_2048.csv
+2025-05-11 16:19:20,339 - MADD - INFO - Save path: logs\parkinson_2048
+2025-05-11 16:19:20,339 - MADD - INFO - Disbalance of classes:
+2025-05-11 16:19:20,544 - MADD - INFO - IC50
+0    0.575153
+1    0.424847
+Name: proportion, dtype: float64
+2025-05-11 16:19:20,544 - MADD - INFO - --------------------------------------------------
+2025-05-11 16:22:41,188 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:22:41,857 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:22:43,935 - ApiComposer - Initial pipeline was fitted in 197.7 sec.
+2025-05-11 16:22:43,936 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 988.7 sec.
+2025-05-11 16:22:43,936 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 16:22:43,952 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 16:22:43,999 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 988.651125 sec.
+2025-05-11 16:22:44,022 - ApiComposer - Hyperparameters tuning started with 2 min. timeout
+2025-05-11 16:25:58,865 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:25:59,580 - Blending - Models weights: {'cb_bag': 0.183139, 'lgbm_bag': 0.672456, 'xgb_bag': 0.144405}
+2025-05-11 16:29:13,261 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:29:13,995 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:32:30,077 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:32:30,819 - Blending - Models weights: {'cb_bag': 0.269289, 'lgbm_bag': 0.675957, 'xgb_bag': 0.054754}
+2025-05-11 16:35:52,255 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:35:53,014 - Blending - Models weights: {'cb_bag': 0.274758, 'lgbm_bag': 0.676228, 'xgb_bag': 0.049014}
+2025-05-11 16:39:11,660 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:39:12,433 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:39:14,534 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 16:39:14,535 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 16:42:29,002 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:42:29,785 - Blending - Models weights: {'cb_bag': 0.183139, 'lgbm_bag': 0.672456, 'xgb_bag': 0.144405}
+2025-05-11 16:45:43,128 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:45:43,925 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:49:04,809 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:49:05,597 - Blending - Models weights: {'cb_bag': 0.269289, 'lgbm_bag': 0.675957, 'xgb_bag': 0.054754}
+2025-05-11 16:52:28,293 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:52:29,101 - Blending - Models weights: {'cb_bag': 0.274758, 'lgbm_bag': 0.676228, 'xgb_bag': 0.049014}
+2025-05-11 16:55:53,941 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:55:54,765 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 16:55:56,922 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 16:55:56,923 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 16:55:56,927 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 16:55:57,016 - ApiComposer - Model generation finished
+2025-05-11 16:59:34,887 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 16:59:35,646 - Blending - Models weights: {'cb_bag': 0.266466, 'lgbm_bag': 0.66183, 'xgb_bag': 0.071704}
+2025-05-11 16:59:35,649 - FEDOT logger - Final pipeline was fitted
+2025-05-11 16:59:35,649 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 16:59:36,628 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 16:59:36,771 - MADD - INFO - Accuracy score: 0.8544061302681992
+2025-05-11 16:59:36,772 - MADD - INFO - F-1 score: 0.8398876404494382
+2025-05-11 16:59:37,054 - MADD - INFO - Pipeline saved to logs\parkinson_2048
+
+2025-05-11 16:59:37,054 - MADD - INFO - ==================================================
+2025-05-11 16:59:37,055 - MADD - INFO - 
+
+2025-05-11 16:59:37,154 - MADD - INFO - Dataset: resistance_2048
+2025-05-11 16:59:37,154 - MADD - INFO - Target: IC50
+2025-05-11 16:59:37,154 - MADD - INFO - Task: classification
+2025-05-11 16:59:37,154 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\resistance_2048.csv
+2025-05-11 16:59:37,154 - MADD - INFO - Save path: logs\resistance_2048
+2025-05-11 16:59:37,154 - MADD - INFO - Disbalance of classes:
+2025-05-11 16:59:37,254 - MADD - INFO - IC50
+1    0.697935
+0    0.302065
+Name: proportion, dtype: float64
+2025-05-11 16:59:37,254 - MADD - INFO - --------------------------------------------------
+2025-05-11 17:02:11,978 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:02:12,663 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 17:02:14,497 - ApiComposer - Initial pipeline was fitted in 154.0 sec.
+2025-05-11 17:02:14,498 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 770.0 sec.
+2025-05-11 17:02:14,498 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 17:02:14,514 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 17:02:14,561 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 770.01631 sec.
+2025-05-11 17:02:14,573 - ApiComposer - Hyperparameters tuning started with 2 min. timeout
+2025-05-11 17:04:42,215 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:04:42,934 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 17:07:10,231 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:07:10,959 - Blending - Models weights: {'cb_bag': 0.376336, 'lgbm_bag': 0.614202, 'xgb_bag': 0.009462}
+2025-05-11 17:09:35,133 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:09:35,867 - Blending - Models weights: {'cb_bag': 0.460972, 'lgbm_bag': 0.536794, 'xgb_bag': 0.002234}
+2025-05-11 17:11:59,657 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:12:00,413 - Blending - Models weights: {'cb_bag': 0.280862, 'lgbm_bag': 0.69642, 'xgb_bag': 0.022718}
+2025-05-11 17:14:24,137 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:14:24,902 - Blending - Models weights: {'cb_bag': 0.408624, 'lgbm_bag': 0.589325, 'xgb_bag': 0.00205}
+2025-05-11 17:14:26,615 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 17:14:26,615 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 17:16:52,474 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:16:53,259 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 17:19:20,183 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:19:20,975 - Blending - Models weights: {'cb_bag': 0.376336, 'lgbm_bag': 0.614202, 'xgb_bag': 0.009462}
+2025-05-11 17:21:47,298 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:21:48,090 - Blending - Models weights: {'cb_bag': 0.460972, 'lgbm_bag': 0.536794, 'xgb_bag': 0.002234}
+2025-05-11 17:24:11,089 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:24:11,884 - Blending - Models weights: {'cb_bag': 0.280862, 'lgbm_bag': 0.69642, 'xgb_bag': 0.022718}
+2025-05-11 17:26:38,213 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:26:39,058 - Blending - Models weights: {'cb_bag': 0.408624, 'lgbm_bag': 0.589325, 'xgb_bag': 0.00205}
+2025-05-11 17:26:40,814 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 17:26:40,814 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 17:26:40,818 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 17:26:40,908 - ApiComposer - Model generation finished
+2025-05-11 17:29:15,019 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:29:15,762 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 17:29:15,764 - FEDOT logger - Final pipeline was fitted
+2025-05-11 17:29:15,764 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 17:29:16,544 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 17:29:16,896 - MADD - INFO - Accuracy score: 0.8194842406876791
+2025-05-11 17:29:16,898 - MADD - INFO - F-1 score: 0.8795411089866156
+2025-05-11 17:29:17,172 - MADD - INFO - Pipeline saved to logs\resistance_2048
+
+2025-05-11 17:29:17,173 - MADD - INFO - ==================================================
+2025-05-11 17:29:17,173 - MADD - INFO - 
+
+2025-05-11 17:29:17,256 - MADD - INFO - Dataset: skl_2048
+2025-05-11 17:29:17,256 - MADD - INFO - Target: IC50
+2025-05-11 17:29:17,256 - MADD - INFO - Task: classification
+2025-05-11 17:29:17,256 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\skl_2048.csv
+2025-05-11 17:29:17,256 - MADD - INFO - Save path: logs\skl_2048
+2025-05-11 17:29:17,256 - MADD - INFO - Disbalance of classes:
+2025-05-11 17:29:17,616 - MADD - INFO - IC50
+1    0.673194
+0    0.326806
+Name: proportion, dtype: float64
+2025-05-11 17:29:17,617 - MADD - INFO - --------------------------------------------------
+2025-05-11 17:34:01,159 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:34:01,833 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 17:34:04,296 - ApiComposer - Initial pipeline was fitted in 277.6 sec.
+2025-05-11 17:34:04,296 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 1388.1 sec.
+2025-05-11 17:34:04,297 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 17:34:04,313 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 17:34:04,360 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 1388.050525 sec.
+2025-05-11 17:34:04,391 - ApiComposer - Hyperparameters tuning started with 0 min. timeout
+2025-05-11 17:38:33,480 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:38:34,202 - Blending - Models weights: {'cb_bag': 0.036353, 'lgbm_bag': 0.871644, 'xgb_bag': 0.092003}
+2025-05-11 17:43:13,216 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:43:13,957 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 17:47:24,957 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:47:25,703 - Blending - Models weights: {'cb_bag': 0.14079, 'lgbm_bag': 0.799957, 'xgb_bag': 0.059253}
+2025-05-11 17:51:55,466 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:51:56,222 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 17:56:26,759 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 17:56:27,535 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 17:56:30,108 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [0.502]
+2025-05-11 17:56:30,109 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}" has no parameters to optimize
+2025-05-11 18:00:58,014 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 18:00:58,793 - Blending - Models weights: {'cb_bag': 0.036353, 'lgbm_bag': 0.871644, 'xgb_bag': 0.092003}
+2025-05-11 18:05:37,124 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 18:05:37,919 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 18:09:58,028 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 18:09:58,823 - Blending - Models weights: {'cb_bag': 0.14079, 'lgbm_bag': 0.799957, 'xgb_bag': 0.059253}
+2025-05-11 18:14:27,955 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 18:14:28,759 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 18:19:10,131 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 18:19:10,945 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 18:19:13,489 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 18:19:13,490 - SimultaneousTuner - Final metric: 0.502
+2025-05-11 18:19:13,494 - ApiComposer - Hyperparameters tuning finished
+2025-05-11 18:19:13,576 - ApiComposer - Model generation finished
+2025-05-11 18:24:14,147 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 18:24:14,961 - Blending - Models weights: {'cb_bag': 0.103483, 'lgbm_bag': 0.650806, 'xgb_bag': 0.245712}
+2025-05-11 18:24:14,963 - FEDOT logger - Final pipeline was fitted
+2025-05-11 18:24:14,964 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 18:24:16,207 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 18:24:16,348 - MADD - INFO - Accuracy score: 0.873821609862219
+2025-05-11 18:24:16,350 - MADD - INFO - F-1 score: 0.9106776180698152
+2025-05-11 18:24:16,664 - MADD - INFO - Pipeline saved to logs\skl_2048
+
+2025-05-11 18:24:16,664 - MADD - INFO - ==================================================
+2025-05-11 18:24:16,664 - MADD - INFO - 
+

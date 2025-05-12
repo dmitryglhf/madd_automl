@@ -88,10 +88,11 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
         timeout=time,
         n_jobs=-1,
         with_tuning=True,
+        pop_size=100000000000000000000000000000000,
         initial_assumption=PipelineBuilder() \
         .add_node('scaling')
         .add_branch('catboost', 'xgboost', 'lgbm')
-        .join_branches('blending').build()
+        .join_branches('logit').build()
     )
 
     model.fit(X_train, y_train)
@@ -117,6 +118,14 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
 
 
 if __name__ == '__main__':
+    data_512 = [
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\alz_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\cancer_clear_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\dislip_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\parkinson_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\resistance_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\skl_512.csv",
+    ]
     data_1024 = [
         r"C:\Users\user\Desktop\madd_automl\data\1024_data\alz_1024.csv",
         r"C:\Users\user\Desktop\madd_automl\data\1024_data\cancer_clear_1024.csv",
@@ -141,5 +150,8 @@ if __name__ == '__main__':
             run_experiment(
                 target='IC50', task='classification',
                 data_path=data, save_name=name,
+                # time=5
                 time=60
             )
+
+    # nohup python main_experiments.py > log_file.out &

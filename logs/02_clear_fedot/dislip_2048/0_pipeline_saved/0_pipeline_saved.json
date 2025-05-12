@@ -1,0 +1,129 @@
+{
+    "total_pipeline_operations": [
+        "pca",
+        "rf",
+        "xgboost",
+        "logit"
+    ],
+    "depth": 3,
+    "nodes": [
+        {
+            "operation_id": 2,
+            "operation_type": "pca",
+            "operation_name": "PCAImplementation",
+            "custom_params": {
+                "svd_solver": "full",
+                "n_components": 0.16316070355473275
+            },
+            "params": {
+                "svd_solver": "full",
+                "n_components": 0.16316070355473275
+            },
+            "nodes_from": [],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_2.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 1,
+            "operation_type": "rf",
+            "operation_name": "RandomForestClassifier",
+            "custom_params": {
+                "n_jobs": 16,
+                "bootstrap": true,
+                "criterion": "gini",
+                "max_features": 0.9972195487185649,
+                "min_samples_leaf": 2,
+                "min_samples_split": 4
+            },
+            "params": {
+                "n_jobs": 16,
+                "bootstrap": true,
+                "criterion": "gini",
+                "max_features": 0.9972195487185649,
+                "min_samples_leaf": 2,
+                "min_samples_split": 4
+            },
+            "nodes_from": [
+                2
+            ],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_1.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 3,
+            "operation_type": "xgboost",
+            "operation_name": "FedotXGBoostClassificationImplementation",
+            "custom_params": {
+                "n_jobs": 16,
+                "verbosity": 0,
+                "booster": "gblinear",
+                "tree_method": "auto",
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 30,
+                "alpha": 419,
+                "colsample_bytree": 0.7930472752059925,
+                "lambda": 669,
+                "learning_rate": 0.6103005897312468,
+                "max_depth": 4,
+                "min_child_weight": 20,
+                "scale_pos_weight": 8,
+                "subsample": 0.8943220098437933
+            },
+            "params": {
+                "n_jobs": 16,
+                "verbosity": 0,
+                "booster": "gblinear",
+                "tree_method": "auto",
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 30,
+                "alpha": 419,
+                "colsample_bytree": 0.7930472752059925,
+                "lambda": 669,
+                "learning_rate": 0.6103005897312468,
+                "max_depth": 4,
+                "min_child_weight": 20,
+                "scale_pos_weight": 8,
+                "subsample": 0.8943220098437933
+            },
+            "nodes_from": [],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_3.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 0,
+            "operation_type": "logit",
+            "operation_name": "LogisticRegression",
+            "custom_params": {
+                "C": 9.116785180170389
+            },
+            "params": {
+                "C": 9.116785180170389
+            },
+            "nodes_from": [
+                1,
+                3
+            ],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_0.pkl"
+            ],
+            "rating": null
+        }
+    ],
+    "preprocessing": [
+        "preprocessing",
+        "data_preprocessor.pkl"
+    ],
+    "descriptive_id": "((/n_pca_{'svd_solver': 'full', 'n_components': 0.16316070355473275};)/n_rf_{'n_jobs': 16, 'bootstrap': True, 'criterion': 'gini', 'max_features': 0.9972195487185649, 'min_samples_leaf': 2, 'min_samples_split': 4};;/n_xgboost_{'n_jobs': 16, 'verbosity': 0, 'booster': 'gblinear', 'tree_method': 'auto', 'enable_categorical': True, 'use_eval_set': True, 'early_stopping_rounds': 30, 'alpha': 419, 'colsample_bytree': 0.7930472752059925, 'lambda': 669, 'learning_rate': 0.6103005897312468, 'max_depth': 4, 'min_child_weight': 20, 'scale_pos_weight': 8, 'subsample': 0.8943220098437933};)/n_logit_{'C': 9.116785180170389}"
+}

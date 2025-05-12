@@ -1,0 +1,433 @@
+nohup: ignoring input
+2025-05-11 11:29:40,859 - MADD - INFO - Dataset: alz_1024
+2025-05-11 11:29:40,859 - Dataset: alz_1024
+2025-05-11 11:29:40,859 - MADD - INFO - Target: IC50
+2025-05-11 11:29:40,859 - Target: IC50
+2025-05-11 11:29:40,859 - MADD - INFO - Task: classification
+2025-05-11 11:29:40,859 - Task: classification
+2025-05-11 11:29:40,859 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\alz_1024.csv
+2025-05-11 11:29:40,859 - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\alz_1024.csv
+2025-05-11 11:29:40,859 - MADD - INFO - Save path: logs\alz_1024
+2025-05-11 11:29:40,859 - Save path: logs\alz_1024
+2025-05-11 11:29:40,859 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:29:40,859 - Disbalance of classes:
+2025-05-11 11:29:40,931 - MADD - INFO - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 11:29:40,931 - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 11:29:40,931 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:29:40,931 - --------------------------------------------------
+2025-05-11 11:29:41,204 - Topological features operation requires extra dependencies for time series forecasting, which are not installed. It can infuence the performance. Please install it by 'pip install fedot[extra]'
+2025-05-11 11:31:46,451 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:31:47,292 - Blending - Models weights: {'cb_bag': 0.380385, 'lgbm_bag': 0.594543, 'xgb_bag': 0.025072}
+2025-05-11 11:31:48,359 - ApiComposer - Initial pipeline was fitted in 124.6 sec.
+2025-05-11 11:31:48,360 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 623.0 sec.
+2025-05-11 11:31:48,360 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:31:48,377 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:31:48,425 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 622.98958 sec.
+2025-05-11 11:31:48,512 - ApiComposer - Model generation finished
+2025-05-11 11:31:49,197 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:31:49,198 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:31:49,624 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:31:50,146 - MADD - INFO - Accuracy score: 0.9476351351351351
+2025-05-11 11:31:50,148 - MADD - INFO - F-1 score: 0.9695780176643768
+2025-05-11 11:31:50,316 - MADD - INFO - Pipeline saved to logs\alz_1024
+
+2025-05-11 11:31:50,317 - MADD - INFO - ==================================================
+2025-05-11 11:31:50,317 - MADD - INFO - 
+
+2025-05-11 11:31:50,349 - MADD - INFO - Dataset: cancer_clear_1024
+2025-05-11 11:31:50,349 - MADD - INFO - Target: IC50
+2025-05-11 11:31:50,349 - MADD - INFO - Task: classification
+2025-05-11 11:31:50,349 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\cancer_clear_1024.csv
+2025-05-11 11:31:50,349 - MADD - INFO - Save path: logs\cancer_clear_1024
+2025-05-11 11:31:50,349 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:31:50,396 - MADD - INFO - IC50
+0    0.521173
+1    0.478827
+Name: proportion, dtype: float64
+2025-05-11 11:31:50,396 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:33:23,846 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:33:24,470 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 11:33:25,396 - ApiComposer - Initial pipeline was fitted in 93.7 sec.
+2025-05-11 11:33:25,396 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 468.4 sec.
+2025-05-11 11:33:25,396 - AssumptionsHandler - Preset was changed to best_quality due to fit time estimation for initial model.
+2025-05-11 11:33:25,412 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['catboost', 'cb_bag', 'fast_ica', 'isolation_forest_class', 'knn', 'lgbm', 'lgbm_bag', 'logit', 'normalization', 'pca', 'poly_features', 'resample', 'rf', 'scaling', 'xgb_bag', 'xgboost'].
+2025-05-11 11:33:25,443 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 468.41528 sec.
+2025-05-11 11:33:25,537 - ApiComposer - Model generation finished
+2025-05-11 11:33:25,849 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:33:25,849 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:33:26,221 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:33:26,346 - MADD - INFO - Accuracy score: 0.7472924187725631
+2025-05-11 11:33:26,346 - MADD - INFO - F-1 score: 0.7407407407407407
+2025-05-11 11:33:26,518 - MADD - INFO - Pipeline saved to logs\cancer_clear_1024
+
+2025-05-11 11:33:26,518 - MADD - INFO - ==================================================
+2025-05-11 11:33:26,518 - MADD - INFO - 
+
+2025-05-11 11:33:26,559 - MADD - INFO - Dataset: dislip_1024
+2025-05-11 11:33:26,559 - MADD - INFO - Target: IC50
+2025-05-11 11:33:26,559 - MADD - INFO - Task: classification
+2025-05-11 11:33:26,560 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\dislip_1024.csv
+2025-05-11 11:33:26,560 - MADD - INFO - Save path: logs\dislip_1024
+2025-05-11 11:33:26,560 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:33:26,593 - MADD - INFO - IC50
+0    0.643879
+1    0.356121
+Name: proportion, dtype: float64
+2025-05-11 11:33:26,593 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:34:42,689 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:34:43,320 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 11:34:44,189 - ApiComposer - Initial pipeline was fitted in 76.5 sec.
+2025-05-11 11:34:44,189 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 382.7 sec.
+2025-05-11 11:34:44,189 - AssumptionsHandler - Preset was changed to best_quality due to fit time estimation for initial model.
+2025-05-11 11:34:44,205 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['catboost', 'cb_bag', 'fast_ica', 'isolation_forest_class', 'knn', 'lgbm', 'lgbm_bag', 'logit', 'normalization', 'pca', 'poly_features', 'resample', 'rf', 'scaling', 'xgb_bag', 'xgboost'].
+2025-05-11 11:34:44,251 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 382.667765 sec.
+2025-05-11 11:34:44,330 - ApiComposer - Model generation finished
+2025-05-11 11:34:44,552 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:34:44,552 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:34:44,913 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:34:45,045 - MADD - INFO - Accuracy score: 0.7566137566137566
+2025-05-11 11:34:45,045 - MADD - INFO - F-1 score: 0.6891891891891891
+2025-05-11 11:34:45,204 - MADD - INFO - Pipeline saved to logs\dislip_1024
+
+2025-05-11 11:34:45,204 - MADD - INFO - ==================================================
+2025-05-11 11:34:45,204 - MADD - INFO - 
+
+2025-05-11 11:34:45,251 - MADD - INFO - Dataset: parkinson_1024
+2025-05-11 11:34:45,251 - MADD - INFO - Target: IC50
+2025-05-11 11:34:45,251 - MADD - INFO - Task: classification
+2025-05-11 11:34:45,251 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\parkinson_1024.csv
+2025-05-11 11:34:45,251 - MADD - INFO - Save path: logs\parkinson_1024
+2025-05-11 11:34:45,251 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:34:45,345 - MADD - INFO - IC50
+0    0.575153
+1    0.424847
+Name: proportion, dtype: float64
+2025-05-11 11:34:45,345 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:36:49,841 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:36:50,508 - Blending - Models weights: {'cb_bag': 0.424618, 'lgbm_bag': 0.547131, 'xgb_bag': 0.028251}
+2025-05-11 11:36:51,674 - ApiComposer - Initial pipeline was fitted in 123.7 sec.
+2025-05-11 11:36:51,674 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 618.4 sec.
+2025-05-11 11:36:51,674 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:36:51,689 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:36:51,725 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 618.41901 sec.
+2025-05-11 11:36:51,839 - ApiComposer - Model generation finished
+2025-05-11 11:36:52,757 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:36:52,757 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:36:53,226 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:36:53,362 - MADD - INFO - Accuracy score: 0.8505747126436781
+2025-05-11 11:36:53,362 - MADD - INFO - F-1 score: 0.833095577746077
+2025-05-11 11:36:53,543 - MADD - INFO - Pipeline saved to logs\parkinson_1024
+
+2025-05-11 11:36:53,544 - MADD - INFO - ==================================================
+2025-05-11 11:36:53,544 - MADD - INFO - 
+
+2025-05-11 11:36:53,579 - MADD - INFO - Dataset: resistance_1024
+2025-05-11 11:36:53,579 - MADD - INFO - Target: IC50
+2025-05-11 11:36:53,579 - MADD - INFO - Task: classification
+2025-05-11 11:36:53,579 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\resistance_1024.csv
+2025-05-11 11:36:53,579 - MADD - INFO - Save path: logs\resistance_1024
+2025-05-11 11:36:53,579 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:36:53,643 - MADD - INFO - IC50
+1    0.697935
+0    0.302065
+Name: proportion, dtype: float64
+2025-05-11 11:36:53,643 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:38:47,307 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:38:47,973 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 11:38:48,940 - ApiComposer - Initial pipeline was fitted in 113.8 sec.
+2025-05-11 11:38:48,940 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 568.8 sec.
+2025-05-11 11:38:48,940 - AssumptionsHandler - Preset was changed to best_quality due to fit time estimation for initial model.
+2025-05-11 11:38:48,957 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['catboost', 'cb_bag', 'fast_ica', 'isolation_forest_class', 'knn', 'lgbm', 'lgbm_bag', 'logit', 'normalization', 'pca', 'poly_features', 'resample', 'rf', 'scaling', 'xgb_bag', 'xgboost'].
+2025-05-11 11:38:49,007 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 568.829365 sec.
+2025-05-11 11:38:49,090 - ApiComposer - Model generation finished
+2025-05-11 11:38:49,507 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:38:49,507 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:38:49,907 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:38:50,057 - MADD - INFO - Accuracy score: 0.8108882521489972
+2025-05-11 11:38:50,057 - MADD - INFO - F-1 score: 0.8735632183908046
+2025-05-11 11:38:50,223 - MADD - INFO - Pipeline saved to logs\resistance_1024
+
+2025-05-11 11:38:50,223 - MADD - INFO - ==================================================
+2025-05-11 11:38:50,223 - MADD - INFO - 
+
+2025-05-11 11:38:50,271 - MADD - INFO - Dataset: skl_1024
+2025-05-11 11:38:50,272 - MADD - INFO - Target: IC50
+2025-05-11 11:38:50,272 - MADD - INFO - Task: classification
+2025-05-11 11:38:50,272 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\1024_data\skl_1024.csv
+2025-05-11 11:38:50,272 - MADD - INFO - Save path: logs\skl_1024
+2025-05-11 11:38:50,272 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:38:50,423 - MADD - INFO - IC50
+1    0.673194
+0    0.326806
+Name: proportion, dtype: float64
+2025-05-11 11:38:50,423 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:41:48,982 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:41:49,627 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 11:41:50,875 - ApiComposer - Initial pipeline was fitted in 176.0 sec.
+2025-05-11 11:41:50,875 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 880.1 sec.
+2025-05-11 11:41:50,875 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:41:50,890 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:41:50,937 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 880.08644 sec.
+2025-05-11 11:41:51,017 - ApiComposer - Model generation finished
+2025-05-11 11:41:52,590 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:41:52,590 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:41:53,122 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:41:53,271 - MADD - INFO - Accuracy score: 0.8723712835387962
+2025-05-11 11:41:53,271 - MADD - INFO - F-1 score: 0.90992835209826
+2025-05-11 11:41:53,451 - MADD - INFO - Pipeline saved to logs\skl_1024
+
+2025-05-11 11:41:53,452 - MADD - INFO - ==================================================
+2025-05-11 11:41:53,452 - MADD - INFO - 
+
+2025-05-11 11:41:53,506 - MADD - INFO - Dataset: alz_2048
+2025-05-11 11:41:53,506 - MADD - INFO - Target: IC50
+2025-05-11 11:41:53,506 - MADD - INFO - Task: classification
+2025-05-11 11:41:53,506 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\alz_2048.csv
+2025-05-11 11:41:53,506 - MADD - INFO - Save path: logs\alz_2048
+2025-05-11 11:41:53,506 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:41:53,673 - MADD - INFO - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 11:41:53,673 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:44:33,179 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:44:33,846 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 11:44:35,721 - ApiComposer - Initial pipeline was fitted in 157.8 sec.
+2025-05-11 11:44:35,721 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 789.1 sec.
+2025-05-11 11:44:35,723 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:44:35,740 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:44:35,774 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 789.14531 sec.
+2025-05-11 11:44:35,868 - ApiComposer - Model generation finished
+2025-05-11 11:44:37,219 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:44:37,219 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:44:38,060 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:44:38,202 - MADD - INFO - Accuracy score: 0.9493243243243243
+2025-05-11 11:44:38,204 - MADD - INFO - F-1 score: 0.9703557312252964
+2025-05-11 11:44:38,464 - MADD - INFO - Pipeline saved to logs\alz_2048
+
+2025-05-11 11:44:38,464 - MADD - INFO - ==================================================
+2025-05-11 11:44:38,464 - MADD - INFO - 
+
+2025-05-11 11:44:38,511 - MADD - INFO - Dataset: cancer_clear_2048
+2025-05-11 11:44:38,511 - MADD - INFO - Target: IC50
+2025-05-11 11:44:38,511 - MADD - INFO - Task: classification
+2025-05-11 11:44:38,511 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\cancer_clear_2048.csv
+2025-05-11 11:44:38,511 - MADD - INFO - Save path: logs\cancer_clear_2048
+2025-05-11 11:44:38,511 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:44:38,605 - MADD - INFO - IC50
+0    0.521173
+1    0.478827
+Name: proportion, dtype: float64
+2025-05-11 11:44:38,605 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:47:09,084 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:47:09,742 - Blending - Models weights: {'cb_bag': 0.315126, 'lgbm_bag': 0.673054, 'xgb_bag': 0.011819}
+2025-05-11 11:47:11,370 - ApiComposer - Initial pipeline was fitted in 150.0 sec.
+2025-05-11 11:47:11,370 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 750.0 sec.
+2025-05-11 11:47:11,370 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:47:11,385 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:47:11,432 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 750.002195 sec.
+2025-05-11 11:47:11,510 - ApiComposer - Model generation finished
+2025-05-11 11:47:12,155 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:47:12,156 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:47:12,884 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:47:13,019 - MADD - INFO - Accuracy score: 0.7256317689530686
+2025-05-11 11:47:13,019 - MADD - INFO - F-1 score: 0.7054263565891473
+2025-05-11 11:47:13,284 - MADD - INFO - Pipeline saved to logs\cancer_clear_2048
+
+2025-05-11 11:47:13,284 - MADD - INFO - ==================================================
+2025-05-11 11:47:13,284 - MADD - INFO - 
+
+2025-05-11 11:47:13,331 - MADD - INFO - Dataset: dislip_2048
+2025-05-11 11:47:13,331 - MADD - INFO - Target: IC50
+2025-05-11 11:47:13,331 - MADD - INFO - Task: classification
+2025-05-11 11:47:13,331 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\dislip_2048.csv
+2025-05-11 11:47:13,331 - MADD - INFO - Save path: logs\dislip_2048
+2025-05-11 11:47:13,331 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:47:13,409 - MADD - INFO - IC50
+0    0.643879
+1    0.356121
+Name: proportion, dtype: float64
+2025-05-11 11:47:13,409 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:48:57,090 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:48:57,760 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 11:48:59,385 - ApiComposer - Initial pipeline was fitted in 103.7 sec.
+2025-05-11 11:48:59,385 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 518.6 sec.
+2025-05-11 11:48:59,386 - AssumptionsHandler - Preset was changed to best_quality due to fit time estimation for initial model.
+2025-05-11 11:48:59,401 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['catboost', 'cb_bag', 'fast_ica', 'isolation_forest_class', 'knn', 'lgbm', 'lgbm_bag', 'logit', 'normalization', 'pca', 'poly_features', 'resample', 'rf', 'scaling', 'xgb_bag', 'xgboost'].
+2025-05-11 11:48:59,447 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 518.57858 sec.
+2025-05-11 11:48:59,532 - ApiComposer - Model generation finished
+2025-05-11 11:48:59,969 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:48:59,970 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:49:00,716 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:49:00,878 - MADD - INFO - Accuracy score: 0.7724867724867724
+2025-05-11 11:49:00,880 - MADD - INFO - F-1 score: 0.7034482758620689
+2025-05-11 11:49:01,146 - MADD - INFO - Pipeline saved to logs\dislip_2048
+
+2025-05-11 11:49:01,146 - MADD - INFO - ==================================================
+2025-05-11 11:49:01,146 - MADD - INFO - 
+
+2025-05-11 11:49:01,178 - MADD - INFO - Dataset: parkinson_2048
+2025-05-11 11:49:01,179 - MADD - INFO - Target: IC50
+2025-05-11 11:49:01,179 - MADD - INFO - Task: classification
+2025-05-11 11:49:01,179 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\parkinson_2048.csv
+2025-05-11 11:49:01,179 - MADD - INFO - Save path: logs\parkinson_2048
+2025-05-11 11:49:01,179 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:49:01,398 - MADD - INFO - IC50
+0    0.575153
+1    0.424847
+Name: proportion, dtype: float64
+2025-05-11 11:49:01,398 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:52:20,039 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:52:20,687 - Blending - Models weights: {'cb_bag': 0.358989, 'lgbm_bag': 0.60093, 'xgb_bag': 0.04008}
+2025-05-11 11:52:22,706 - ApiComposer - Initial pipeline was fitted in 195.7 sec.
+2025-05-11 11:52:22,706 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 978.4 sec.
+2025-05-11 11:52:22,706 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:52:22,723 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:52:22,773 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 978.43528 sec.
+2025-05-11 11:52:22,865 - ApiComposer - Model generation finished
+2025-05-11 11:52:24,763 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:52:24,763 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:52:25,701 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:52:25,853 - MADD - INFO - Accuracy score: 0.8531289910600255
+2025-05-11 11:52:25,853 - MADD - INFO - F-1 score: 0.8350071736011477
+2025-05-11 11:52:26,136 - MADD - INFO - Pipeline saved to logs\parkinson_2048
+
+2025-05-11 11:52:26,136 - MADD - INFO - ==================================================
+2025-05-11 11:52:26,136 - MADD - INFO - 
+
+2025-05-11 11:52:26,186 - MADD - INFO - Dataset: resistance_2048
+2025-05-11 11:52:26,186 - MADD - INFO - Target: IC50
+2025-05-11 11:52:26,186 - MADD - INFO - Task: classification
+2025-05-11 11:52:26,186 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\resistance_2048.csv
+2025-05-11 11:52:26,186 - MADD - INFO - Save path: logs\resistance_2048
+2025-05-11 11:52:26,186 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:52:26,314 - MADD - INFO - IC50
+1    0.697935
+0    0.302065
+Name: proportion, dtype: float64
+2025-05-11 11:52:26,314 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:54:53,470 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:54:54,175 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 11:54:55,934 - ApiComposer - Initial pipeline was fitted in 146.4 sec.
+2025-05-11 11:54:55,934 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 732.0 sec.
+2025-05-11 11:54:55,935 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:54:55,951 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:54:55,995 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 732.026225 sec.
+2025-05-11 11:54:56,077 - ApiComposer - Model generation finished
+2025-05-11 11:54:56,885 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:54:56,885 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:54:57,635 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:54:57,779 - MADD - INFO - Accuracy score: 0.8108882521489972
+2025-05-11 11:54:57,779 - MADD - INFO - F-1 score: 0.8725868725868726
+2025-05-11 11:54:58,050 - MADD - INFO - Pipeline saved to logs\resistance_2048
+
+2025-05-11 11:54:58,050 - MADD - INFO - ==================================================
+2025-05-11 11:54:58,050 - MADD - INFO - 
+
+2025-05-11 11:54:58,085 - MADD - INFO - Dataset: skl_2048
+2025-05-11 11:54:58,085 - MADD - INFO - Target: IC50
+2025-05-11 11:54:58,085 - MADD - INFO - Task: classification
+2025-05-11 11:54:58,085 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\2048_data\skl_2048.csv
+2025-05-11 11:54:58,085 - MADD - INFO - Save path: logs\skl_2048
+2025-05-11 11:54:58,085 - MADD - INFO - Disbalance of classes:
+2025-05-11 11:54:58,445 - MADD - INFO - IC50
+1    0.673194
+0    0.326806
+Name: proportion, dtype: float64
+2025-05-11 11:54:58,445 - MADD - INFO - --------------------------------------------------
+2025-05-11 11:59:40,082 - Blending - Starting weights optimization for models: ['cb_bag', 'lgbm_bag', 'xgb_bag']. Obtained metric - accuracy_score.
+2025-05-11 11:59:40,748 - Blending - Models weights: {'cb_bag': 0.268513, 'lgbm_bag': 0.695571, 'xgb_bag': 0.035916}
+2025-05-11 11:59:43,155 - ApiComposer - Initial pipeline was fitted in 275.6 sec.
+2025-05-11 11:59:43,156 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 1378.0 sec.
+2025-05-11 11:59:43,156 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-11 11:59:43,172 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 60 min. Set of candidate models: ['cb_bag', 'knn', 'lgbm_bag', 'logit', 'normalization', 'pca', 'rf', 'scaling', 'xgb_bag'].
+2025-05-11 11:59:43,219 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 1378.013115 sec.
+2025-05-11 11:59:43,308 - ApiComposer - Model generation finished
+2025-05-11 11:59:46,530 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-11 11:59:46,531 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+blending - {}
+cb_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgb_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbm_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-11 11:59:47,672 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blending, cb_bag, scaling, xgb_bag, lgbm_bag]}
+2025-05-11 11:59:47,821 - MADD - INFO - Accuracy score: 0.8759970993473531
+2025-05-11 11:59:47,823 - MADD - INFO - F-1 score: 0.9125319693094629
+2025-05-11 11:59:48,124 - MADD - INFO - Pipeline saved to logs\skl_2048
+
+2025-05-11 11:59:48,124 - MADD - INFO - ==================================================
+2025-05-11 11:59:48,124 - MADD - INFO - 
+

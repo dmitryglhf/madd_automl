@@ -2,7 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
-
+from pathlib import Path
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
@@ -28,12 +28,12 @@ if __name__ == "__main__":
     data_paths = [
         # r"C:\Users\user\Desktop\madd_automl\data\init_data\alz.csv",
         # r"C:\Users\user\Desktop\madd_automl\data\init_data\skl.csv",
-        # r"C:\Users\user\Desktop\madd_automl\data\init_data\cancer_clear.csv"
+        r"C:\Users\user\Desktop\madd_automl\data\init_data\cancer_clear.csv",
         r"C:\Users\user\Desktop\madd_automl\data\init_data\dislip.csv",
         r"C:\Users\user\Desktop\madd_automl\data\init_data\parkinson.csv",
         r"C:\Users\user\Desktop\madd_automl\data\init_data\resistance.csv",
     ]
     for path in data_paths:
-        name = path.replace('.csv', '')
-        input_data_save_ic50(path, name, target='IC50', vector_size=2048)
-        input_data_save_ic50(path, name, target='IC50', vector_size=1024)
+        name = Path(path).stem
+        # input_data_save_ic50(path, name, target='IC50', vector_size=2048)
+        input_data_save_ic50(path, name, target='IC50', vector_size=512)

@@ -1,0 +1,506 @@
+2025-05-11 20:11:16,959 - MADD - INFO - Dataset: alz_512
+2025-05-11 20:11:16 INFO     Dataset: alz_512
+2025-05-11 20:11:16,959 - Dataset: alz_512
+2025-05-11 20:11:16,959 - MADD - INFO - Target: IC50
+2025-05-11 20:11:16 INFO     Target: IC50
+2025-05-11 20:11:16,959 - Target: IC50
+2025-05-11 20:11:16,959 - MADD - INFO - Task: classification
+2025-05-11 20:11:16 INFO     Task: classification
+2025-05-11 20:11:16,959 - Task: classification
+2025-05-11 20:11:16,959 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\alz_512.csv
+2025-05-11 20:11:16 INFO     Data path: C:\Users\user\Desktop\madd_automl\data\512_data\alz_512.csv
+2025-05-11 20:11:16,959 - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\alz_512.csv
+2025-05-11 20:11:16,959 - MADD - INFO - Save path: logs\alz_512
+2025-05-11 20:11:16 INFO     Save path: logs\alz_512
+2025-05-11 20:11:16,959 - Save path: logs\alz_512
+2025-05-11 20:11:16,959 - MADD - INFO - Disbalance of classes:
+2025-05-11 20:11:16 INFO     Disbalance of classes:
+2025-05-11 20:11:16,959 - Disbalance of classes:
+2025-05-11 20:11:16,993 - MADD - INFO - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 20:11:16 INFO     IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 20:11:16,993 - IC50
+1    0.851495
+0    0.148505
+Name: proportion, dtype: float64
+2025-05-11 20:11:16,993 - MADD - INFO - --------------------------------------------------
+2025-05-11 20:11:16 INFO     --------------------------------------------------
+2025-05-11 20:11:16,993 - --------------------------------------------------
+2025-05-11 20:11:17 INFO     Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:11:17,012 - Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:11:17 INFO     No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:11:17,012 - No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:11:17 INFO     Using task type: binary_classification
+2025-05-11 20:11:17,043 - Using task type: binary_classification
+2025-05-11 20:11:17 INFO     Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:11:17,043 - Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:11:20 INFO     Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:11:20,711 - Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:11:20 INFO     Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:11:20,711 - Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:11:20 INFO     Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:11:20,726 - Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:11:20 INFO     Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:11:20,743 - Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:11:25 INFO     Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:11:25,973 - Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:11:26 INFO     Attempting HuggingFace download: tabpfn-v2-classifier-od3j1g5m.ckpt
+2025-05-11 20:11:26,164 - Attempting HuggingFace download: tabpfn-v2-classifier-od3j1g5m.ckpt
+2025-05-11 20:11:27 INFO     Successfully downloaded to C:\Users\user\Desktop\madd_automl\env\Lib\site-packages\tabpfn_extensions\hpo\hpo_models\tabpfn-v2-classifier-od3j1g5m.ckpt
+2025-05-11 20:11:27,964 - Successfully downloaded to C:\Users\user\Desktop\madd_automl\env\Lib\site-packages\tabpfn_extensions\hpo\hpo_models\tabpfn-v2-classifier-od3j1g5m.ckpt
+2025-05-11 20:11:31 INFO     Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:11:31,589 - Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:11:32 INFO     Attempting HuggingFace download: tabpfn-v2-classifier-llderlii.ckpt
+2025-05-11 20:11:32,288 - Attempting HuggingFace download: tabpfn-v2-classifier-llderlii.ckpt
+2025-05-11 20:11:33 INFO     Successfully downloaded to C:\Users\user\Desktop\madd_automl\env\Lib\site-packages\tabpfn_extensions\hpo\hpo_models\tabpfn-v2-classifier-llderlii.ckpt
+2025-05-11 20:11:33,428 - Successfully downloaded to C:\Users\user\Desktop\madd_automl\env\Lib\site-packages\tabpfn_extensions\hpo\hpo_models\tabpfn-v2-classifier-llderlii.ckpt
+2025-05-11 20:12:33 INFO     Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:12:33,116 - Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:12:33 INFO     Attempting HuggingFace download: tabpfn-v2-classifier-znskzxi4.ckpt
+2025-05-11 20:12:33,831 - Attempting HuggingFace download: tabpfn-v2-classifier-znskzxi4.ckpt
+2025-05-11 20:12:34 INFO     Successfully downloaded to C:\Users\user\Desktop\madd_automl\env\Lib\site-packages\tabpfn_extensions\hpo\hpo_models\tabpfn-v2-classifier-znskzxi4.ckpt
+2025-05-11 20:12:34,551 - Successfully downloaded to C:\Users\user\Desktop\madd_automl\env\Lib\site-packages\tabpfn_extensions\hpo\hpo_models\tabpfn-v2-classifier-znskzxi4.ckpt
+2025-05-11 20:13:39 INFO     Time limit reached.
+2025-05-11 20:13:39,506 - Time limit reached.
+2025-05-11 20:13:39 INFO     Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:13:39,506 - Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:13:39 INFO     As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:13:39,506 - As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:13:39 INFO     Order of selections: [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+2025-05-11 20:13:39,593 - Order of selections: [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+2025-05-11 20:13:39 INFO     Val loss over iterations: [-0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9836441336441337, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339]
+2025-05-11 20:13:39,593 - Val loss over iterations: [-0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9835275835275834, -0.9836441336441337, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9836829836829837, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339, -0.9837218337218339]
+2025-05-11 20:13:39 INFO     Model losses: [-0.98352758 -0.98150738 -0.97940948 -0.97529138]
+2025-05-11 20:13:39,593 - Model losses: [-0.98352758 -0.98150738 -0.97940948 -0.97529138]
+2025-05-11 20:13:39 INFO     Best weights: [0.93333333 0.06666667 0.         0.        ]
+2025-05-11 20:13:39,593 - Best weights: [0.93333333 0.06666667 0.         0.        ]
+2025-05-11 20:16:25,077 - MADD - INFO - Accuracy score: 0.9510135135135135
+2025-05-11 20:16:25 INFO     Accuracy score: 0.9510135135135135
+2025-05-11 20:16:25,077 - Accuracy score: 0.9510135135135135
+2025-05-11 20:16:25,077 - MADD - INFO - F-1 score: 0.9712586719524281
+2025-05-11 20:16:25 INFO     F-1 score: 0.9712586719524281
+2025-05-11 20:16:25,077 - F-1 score: 0.9712586719524281
+2025-05-11 20:16:25,077 - MADD - INFO - ==================================================
+2025-05-11 20:16:25 INFO     ==================================================
+2025-05-11 20:16:25,077 - ==================================================
+2025-05-11 20:16:25,077 - MADD - INFO - 
+
+2025-05-11 20:16:25 INFO     
+
+2025-05-11 20:16:25,077 - 
+
+2025-05-11 20:16:25,202 - MADD - INFO - Dataset: cancer_clear_512
+2025-05-11 20:16:25 INFO     Dataset: cancer_clear_512
+2025-05-11 20:16:25,202 - Dataset: cancer_clear_512
+2025-05-11 20:16:25,202 - MADD - INFO - Target: IC50
+2025-05-11 20:16:25 INFO     Target: IC50
+2025-05-11 20:16:25,202 - Target: IC50
+2025-05-11 20:16:25,202 - MADD - INFO - Task: classification
+2025-05-11 20:16:25 INFO     Task: classification
+2025-05-11 20:16:25,202 - Task: classification
+2025-05-11 20:16:25,202 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\cancer_clear_512.csv
+2025-05-11 20:16:25 INFO     Data path: C:\Users\user\Desktop\madd_automl\data\512_data\cancer_clear_512.csv
+2025-05-11 20:16:25,202 - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\cancer_clear_512.csv
+2025-05-11 20:16:25,202 - MADD - INFO - Save path: logs\cancer_clear_512
+2025-05-11 20:16:25 INFO     Save path: logs\cancer_clear_512
+2025-05-11 20:16:25,202 - Save path: logs\cancer_clear_512
+2025-05-11 20:16:25,202 - MADD - INFO - Disbalance of classes:
+2025-05-11 20:16:25 INFO     Disbalance of classes:
+2025-05-11 20:16:25,202 - Disbalance of classes:
+2025-05-11 20:16:25,249 - MADD - INFO - IC50
+0    0.521173
+1    0.478827
+Name: proportion, dtype: float64
+2025-05-11 20:16:25 INFO     IC50
+0    0.521173
+1    0.478827
+Name: proportion, dtype: float64
+2025-05-11 20:16:25,249 - IC50
+0    0.521173
+1    0.478827
+Name: proportion, dtype: float64
+2025-05-11 20:16:25,249 - MADD - INFO - --------------------------------------------------
+2025-05-11 20:16:25 INFO     --------------------------------------------------
+2025-05-11 20:16:25,249 - --------------------------------------------------
+2025-05-11 20:16:25 INFO     Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:16:25,249 - Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:16:25 INFO     No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:16:25,249 - No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:16:25 INFO     Using task type: binary_classification
+2025-05-11 20:16:25,264 - Using task type: binary_classification
+2025-05-11 20:16:25 INFO     Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:16:25,264 - Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:16:28 INFO     Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:16:28,871 - Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:16:28 INFO     Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:16:28,871 - Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:16:28 INFO     Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:16:28,871 - Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:16:28 INFO     Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:16:28,886 - Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:16:36 INFO     Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:16:36,778 - Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:16:44 INFO     Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:16:44,274 - Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:17:45 INFO     Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:17:45,470 - Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:18:49 INFO     Time limit reached.
+2025-05-11 20:18:49,304 - Time limit reached.
+2025-05-11 20:18:49 INFO     Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:18:49,304 - Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:18:49 INFO     As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:18:49,304 - As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:18:49 INFO     Order of selections: [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 2, 1, 0, 1, 0, 0, 1, 0, 1, 0]
+2025-05-11 20:18:49,382 - Order of selections: [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 2, 1, 0, 1, 0, 0, 1, 0, 1, 0]
+2025-05-11 20:18:49 INFO     Val loss over iterations: [-0.8240953221535746, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8283318623124449, -0.8283318623124449, -0.8285966460723742, -0.8285966460723742, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743]
+2025-05-11 20:18:49,382 - Val loss over iterations: [-0.8240953221535746, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8280670785525155, -0.8283318623124449, -0.8283318623124449, -0.8285966460723742, -0.8285966460723742, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743, -0.8285966460723743]
+2025-05-11 20:18:49 INFO     Model losses: [-0.82409532 -0.8239188  -0.82197705 -0.80564872]
+2025-05-11 20:18:49,382 - Model losses: [-0.82409532 -0.8239188  -0.82197705 -0.80564872]
+2025-05-11 20:18:49 INFO     Best weights: [0.53846154 0.46153846 0.         0.        ]
+2025-05-11 20:18:49,382 - Best weights: [0.53846154 0.46153846 0.         0.        ]
+2025-05-11 20:19:54,931 - MADD - INFO - Accuracy score: 0.7725631768953068
+2025-05-11 20:19:54 INFO     Accuracy score: 0.7725631768953068
+2025-05-11 20:19:54,931 - Accuracy score: 0.7725631768953068
+2025-05-11 20:19:54,931 - MADD - INFO - F-1 score: 0.7725631768953068
+2025-05-11 20:19:54 INFO     F-1 score: 0.7725631768953068
+2025-05-11 20:19:54,931 - F-1 score: 0.7725631768953068
+2025-05-11 20:19:54,931 - MADD - INFO - ==================================================
+2025-05-11 20:19:54 INFO     ==================================================
+2025-05-11 20:19:54,931 - ==================================================
+2025-05-11 20:19:54,931 - MADD - INFO - 
+
+2025-05-11 20:19:54 INFO     
+
+2025-05-11 20:19:54,931 - 
+
+2025-05-11 20:19:55,007 - MADD - INFO - Dataset: dislip_512
+2025-05-11 20:19:55 INFO     Dataset: dislip_512
+2025-05-11 20:19:55,007 - Dataset: dislip_512
+2025-05-11 20:19:55,007 - MADD - INFO - Target: IC50
+2025-05-11 20:19:55 INFO     Target: IC50
+2025-05-11 20:19:55,007 - Target: IC50
+2025-05-11 20:19:55,007 - MADD - INFO - Task: classification
+2025-05-11 20:19:55 INFO     Task: classification
+2025-05-11 20:19:55,007 - Task: classification
+2025-05-11 20:19:55,007 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\dislip_512.csv
+2025-05-11 20:19:55 INFO     Data path: C:\Users\user\Desktop\madd_automl\data\512_data\dislip_512.csv
+2025-05-11 20:19:55,007 - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\dislip_512.csv
+2025-05-11 20:19:55,007 - MADD - INFO - Save path: logs\dislip_512
+2025-05-11 20:19:55 INFO     Save path: logs\dislip_512
+2025-05-11 20:19:55,007 - Save path: logs\dislip_512
+2025-05-11 20:19:55,007 - MADD - INFO - Disbalance of classes:
+2025-05-11 20:19:55 INFO     Disbalance of classes:
+2025-05-11 20:19:55,007 - Disbalance of classes:
+2025-05-11 20:19:55,031 - MADD - INFO - IC50
+0    0.643879
+1    0.356121
+Name: proportion, dtype: float64
+2025-05-11 20:19:55 INFO     IC50
+0    0.643879
+1    0.356121
+Name: proportion, dtype: float64
+2025-05-11 20:19:55,031 - IC50
+0    0.643879
+1    0.356121
+Name: proportion, dtype: float64
+2025-05-11 20:19:55,031 - MADD - INFO - --------------------------------------------------
+2025-05-11 20:19:55 INFO     --------------------------------------------------
+2025-05-11 20:19:55,031 - --------------------------------------------------
+2025-05-11 20:19:55 INFO     Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:19:55,031 - Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:19:55 INFO     No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:19:55,031 - No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:19:55 INFO     Using task type: binary_classification
+2025-05-11 20:19:55,047 - Using task type: binary_classification
+2025-05-11 20:19:55 INFO     Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:19:55,047 - Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:19:58 INFO     Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:19:58,662 - Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:19:58 INFO     Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:19:58,662 - Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:19:58 INFO     Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:19:58,662 - Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:19:58 INFO     Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:19:58,677 - Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:20:02 INFO     Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:20:02,006 - Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:20:04 INFO     Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:20:04,898 - Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:21:06 INFO     Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:21:06,457 - Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:22:09 INFO     Time limit reached.
+2025-05-11 20:22:09,397 - Time limit reached.
+2025-05-11 20:22:09 INFO     Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:22:09,397 - Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:22:09 INFO     As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:22:09,397 - As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:22:09 INFO     Order of selections: [0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1]
+2025-05-11 20:22:09,475 - Order of selections: [0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1]
+2025-05-11 20:22:09 INFO     Val loss over iterations: [-0.8476780185758513, -0.8534571723426212, -0.8544891640866874, -0.8544891640866874, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006]
+2025-05-11 20:22:09,475 - Val loss over iterations: [-0.8476780185758513, -0.8534571723426212, -0.8544891640866874, -0.8544891640866874, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006, -0.8546955624355006]
+2025-05-11 20:22:09 INFO     Model losses: [-0.84767802 -0.84747162 -0.84066047 -0.84066047]
+2025-05-11 20:22:09,475 - Model losses: [-0.84767802 -0.84747162 -0.84066047 -0.84066047]
+2025-05-11 20:22:09 INFO     Best weights: [0.6 0.4 0.  0. ]
+2025-05-11 20:22:09,475 - Best weights: [0.6 0.4 0.  0. ]
+2025-05-11 20:23:20,208 - MADD - INFO - Accuracy score: 0.7566137566137566
+2025-05-11 20:23:20 INFO     Accuracy score: 0.7566137566137566
+2025-05-11 20:23:20,208 - Accuracy score: 0.7566137566137566
+2025-05-11 20:23:20,209 - MADD - INFO - F-1 score: 0.6805555555555556
+2025-05-11 20:23:20 INFO     F-1 score: 0.6805555555555556
+2025-05-11 20:23:20,209 - F-1 score: 0.6805555555555556
+2025-05-11 20:23:20,210 - MADD - INFO - ==================================================
+2025-05-11 20:23:20 INFO     ==================================================
+2025-05-11 20:23:20,210 - ==================================================
+2025-05-11 20:23:20,210 - MADD - INFO - 
+
+2025-05-11 20:23:20 INFO     
+
+2025-05-11 20:23:20,210 - 
+
+2025-05-11 20:23:20,265 - MADD - INFO - Dataset: parkinson_512
+2025-05-11 20:23:20 INFO     Dataset: parkinson_512
+2025-05-11 20:23:20,265 - Dataset: parkinson_512
+2025-05-11 20:23:20,265 - MADD - INFO - Target: IC50
+2025-05-11 20:23:20 INFO     Target: IC50
+2025-05-11 20:23:20,265 - Target: IC50
+2025-05-11 20:23:20,265 - MADD - INFO - Task: classification
+2025-05-11 20:23:20 INFO     Task: classification
+2025-05-11 20:23:20,265 - Task: classification
+2025-05-11 20:23:20,265 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\parkinson_512.csv
+2025-05-11 20:23:20 INFO     Data path: C:\Users\user\Desktop\madd_automl\data\512_data\parkinson_512.csv
+2025-05-11 20:23:20,265 - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\parkinson_512.csv
+2025-05-11 20:23:20,265 - MADD - INFO - Save path: logs\parkinson_512
+2025-05-11 20:23:20 INFO     Save path: logs\parkinson_512
+2025-05-11 20:23:20,265 - Save path: logs\parkinson_512
+2025-05-11 20:23:20,265 - MADD - INFO - Disbalance of classes:
+2025-05-11 20:23:20 INFO     Disbalance of classes:
+2025-05-11 20:23:20,265 - Disbalance of classes:
+2025-05-11 20:23:20,340 - MADD - INFO - IC50
+0    0.575153
+1    0.424847
+Name: proportion, dtype: float64
+2025-05-11 20:23:20 INFO     IC50
+0    0.575153
+1    0.424847
+Name: proportion, dtype: float64
+2025-05-11 20:23:20,340 - IC50
+0    0.575153
+1    0.424847
+Name: proportion, dtype: float64
+2025-05-11 20:23:20,340 - MADD - INFO - --------------------------------------------------
+2025-05-11 20:23:20 INFO     --------------------------------------------------
+2025-05-11 20:23:20,340 - --------------------------------------------------
+2025-05-11 20:23:20 INFO     Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:23:20,340 - Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:23:20 INFO     No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:23:20,340 - No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:23:20 INFO     Using task type: binary_classification
+2025-05-11 20:23:20,377 - Using task type: binary_classification
+2025-05-11 20:23:20 INFO     Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:23:20,377 - Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:23:24 INFO     Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:23:24,032 - Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:23:24 INFO     Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:23:24,032 - Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:23:24 INFO     Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:23:24,032 - Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:23:24 INFO     Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:23:24,063 - Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:24:07 INFO     Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:24:07,537 - Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:24:53 INFO     Likely not enough time left for another model.
+2025-05-11 20:24:53,061 - Likely not enough time left for another model.
+2025-05-11 20:24:53 INFO     Stop validation of all models after 2 models in repeat 1.
+2025-05-11 20:24:53,061 - Stop validation of all models after 2 models in repeat 1.
+2025-05-11 20:24:53 INFO     As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:24:53,061 - As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:24:53 INFO     Order of selections: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-11 20:24:53,092 - Order of selections: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-11 20:24:53 INFO     Val loss over iterations: [-0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838]
+2025-05-11 20:24:53,092 - Val loss over iterations: [-0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838, -0.9275633607877838]
+2025-05-11 20:24:53 INFO     Model losses: [-0.92756336 -0.91363193]
+2025-05-11 20:24:53,092 - Model losses: [-0.92756336 -0.91363193]
+2025-05-11 20:24:53 INFO     Best weights: [1. 0.]
+2025-05-11 20:24:53,092 - Best weights: [1. 0.]
+2025-05-11 20:26:06,418 - MADD - INFO - Accuracy score: 0.8492975734355045
+2025-05-11 20:26:06 INFO     Accuracy score: 0.8492975734355045
+2025-05-11 20:26:06,418 - Accuracy score: 0.8492975734355045
+2025-05-11 20:26:06,418 - MADD - INFO - F-1 score: 0.8294797687861272
+2025-05-11 20:26:06 INFO     F-1 score: 0.8294797687861272
+2025-05-11 20:26:06,418 - F-1 score: 0.8294797687861272
+2025-05-11 20:26:06,418 - MADD - INFO - ==================================================
+2025-05-11 20:26:06 INFO     ==================================================
+2025-05-11 20:26:06,418 - ==================================================
+2025-05-11 20:26:06,418 - MADD - INFO - 
+
+2025-05-11 20:26:06 INFO     
+
+2025-05-11 20:26:06,418 - 
+
+2025-05-11 20:26:06,434 - MADD - INFO - Dataset: resistance_512
+2025-05-11 20:26:06 INFO     Dataset: resistance_512
+2025-05-11 20:26:06,434 - Dataset: resistance_512
+2025-05-11 20:26:06,434 - MADD - INFO - Target: IC50
+2025-05-11 20:26:06 INFO     Target: IC50
+2025-05-11 20:26:06,434 - Target: IC50
+2025-05-11 20:26:06,434 - MADD - INFO - Task: classification
+2025-05-11 20:26:06 INFO     Task: classification
+2025-05-11 20:26:06,434 - Task: classification
+2025-05-11 20:26:06,434 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\resistance_512.csv
+2025-05-11 20:26:06 INFO     Data path: C:\Users\user\Desktop\madd_automl\data\512_data\resistance_512.csv
+2025-05-11 20:26:06,434 - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\resistance_512.csv
+2025-05-11 20:26:06,434 - MADD - INFO - Save path: logs\resistance_512
+2025-05-11 20:26:06 INFO     Save path: logs\resistance_512
+2025-05-11 20:26:06,434 - Save path: logs\resistance_512
+2025-05-11 20:26:06,434 - MADD - INFO - Disbalance of classes:
+2025-05-11 20:26:06 INFO     Disbalance of classes:
+2025-05-11 20:26:06,434 - Disbalance of classes:
+2025-05-11 20:26:06,450 - MADD - INFO - IC50
+1    0.697935
+0    0.302065
+Name: proportion, dtype: float64
+2025-05-11 20:26:06 INFO     IC50
+1    0.697935
+0    0.302065
+Name: proportion, dtype: float64
+2025-05-11 20:26:06,450 - IC50
+1    0.697935
+0    0.302065
+Name: proportion, dtype: float64
+2025-05-11 20:26:06,450 - MADD - INFO - --------------------------------------------------
+2025-05-11 20:26:06 INFO     --------------------------------------------------
+2025-05-11 20:26:06,450 - --------------------------------------------------
+2025-05-11 20:26:06 INFO     Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:26:06,450 - Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:26:06 INFO     No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:26:06,450 - No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:26:06 INFO     Using task type: binary_classification
+2025-05-11 20:26:06,465 - Using task type: binary_classification
+2025-05-11 20:26:06 INFO     Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:26:06,465 - Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:26:10 INFO     Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:26:10,347 - Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:26:10 INFO     Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:26:10,347 - Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:26:10 INFO     Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:26:10,347 - Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:26:10 INFO     Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:26:10,363 - Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:26:16 INFO     Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:26:16,492 - Yield data for model random_tabpfn_model_1 and split 0 (repeat=1).
+2025-05-11 20:26:25 INFO     Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:26:25,708 - Yield data for model random_rf_pfn_model_2 and split 0 (repeat=1).
+2025-05-11 20:27:29 INFO     Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:27:29,218 - Yield data for model random_rf_pfn_model_3 and split 0 (repeat=1).
+2025-05-11 20:28:32 INFO     Time limit reached.
+2025-05-11 20:28:32,258 - Time limit reached.
+2025-05-11 20:28:32 INFO     Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:28:32,258 - Stop validation of all models after 4 models in repeat 1.
+2025-05-11 20:28:32 INFO     As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:28:32,258 - As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:28:32 INFO     Order of selections: [0, 1, 0, 1, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 2, 0, 0, 0, 2, 0]
+2025-05-11 20:28:32,338 - Order of selections: [0, 1, 0, 1, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 2, 0, 0, 0, 2, 0]
+2025-05-11 20:28:32 INFO     Val loss over iterations: [-0.8664322250639386, -0.8680946291560102, -0.8680946291560102, -0.8680946291560102, -0.868158567774936, -0.868158567774936, -0.868222506393862, -0.8686700767263427, -0.8686700767263427, -0.8686700767263427, -0.8686700767263427, -0.8686700767263427, -0.8687340153452685, -0.8687340153452685, -0.8689258312020459, -0.8689258312020459, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046]
+2025-05-11 20:28:32,338 - Val loss over iterations: [-0.8664322250639386, -0.8680946291560102, -0.8680946291560102, -0.8680946291560102, -0.868158567774936, -0.868158567774936, -0.868222506393862, -0.8686700767263427, -0.8686700767263427, -0.8686700767263427, -0.8686700767263427, -0.8686700767263427, -0.8687340153452685, -0.8687340153452685, -0.8689258312020459, -0.8689258312020459, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046, -0.868925831202046]
+2025-05-11 20:28:32 INFO     Model losses: [-0.86643223 -0.86624041 -0.86202046 -0.85722506]
+2025-05-11 20:28:32,338 - Model losses: [-0.86643223 -0.86624041 -0.86202046 -0.85722506]
+2025-05-11 20:28:32 INFO     Best weights: [0.47058824 0.47058824 0.05882353 0.        ]
+2025-05-11 20:28:32,338 - Best weights: [0.47058824 0.47058824 0.05882353 0.        ]
+2025-05-11 20:29:48,523 - MADD - INFO - Accuracy score: 0.7564469914040115
+2025-05-11 20:29:48 INFO     Accuracy score: 0.7564469914040115
+2025-05-11 20:29:48,523 - Accuracy score: 0.7564469914040115
+2025-05-11 20:29:48,523 - MADD - INFO - F-1 score: 0.8316831683168316
+2025-05-11 20:29:48 INFO     F-1 score: 0.8316831683168316
+2025-05-11 20:29:48,523 - F-1 score: 0.8316831683168316
+2025-05-11 20:29:48,523 - MADD - INFO - ==================================================
+2025-05-11 20:29:48 INFO     ==================================================
+2025-05-11 20:29:48,523 - ==================================================
+2025-05-11 20:29:48,523 - MADD - INFO - 
+
+2025-05-11 20:29:48 INFO     
+
+2025-05-11 20:29:48,523 - 
+
+2025-05-11 20:29:48,601 - MADD - INFO - Dataset: skl_512
+2025-05-11 20:29:48 INFO     Dataset: skl_512
+2025-05-11 20:29:48,601 - Dataset: skl_512
+2025-05-11 20:29:48,601 - MADD - INFO - Target: IC50
+2025-05-11 20:29:48 INFO     Target: IC50
+2025-05-11 20:29:48,601 - Target: IC50
+2025-05-11 20:29:48,601 - MADD - INFO - Task: classification
+2025-05-11 20:29:48 INFO     Task: classification
+2025-05-11 20:29:48,601 - Task: classification
+2025-05-11 20:29:48,601 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\skl_512.csv
+2025-05-11 20:29:48 INFO     Data path: C:\Users\user\Desktop\madd_automl\data\512_data\skl_512.csv
+2025-05-11 20:29:48,601 - Data path: C:\Users\user\Desktop\madd_automl\data\512_data\skl_512.csv
+2025-05-11 20:29:48,601 - MADD - INFO - Save path: logs\skl_512
+2025-05-11 20:29:48 INFO     Save path: logs\skl_512
+2025-05-11 20:29:48,601 - Save path: logs\skl_512
+2025-05-11 20:29:48,601 - MADD - INFO - Disbalance of classes:
+2025-05-11 20:29:48 INFO     Disbalance of classes:
+2025-05-11 20:29:48,601 - Disbalance of classes:
+2025-05-11 20:29:48,686 - MADD - INFO - IC50
+1    0.673194
+0    0.326806
+Name: proportion, dtype: float64
+2025-05-11 20:29:48 INFO     IC50
+1    0.673194
+0    0.326806
+Name: proportion, dtype: float64
+2025-05-11 20:29:48,686 - IC50
+1    0.673194
+0    0.326806
+Name: proportion, dtype: float64
+2025-05-11 20:29:48,686 - MADD - INFO - --------------------------------------------------
+2025-05-11 20:29:48 INFO     --------------------------------------------------
+2025-05-11 20:29:48,686 - --------------------------------------------------
+2025-05-11 20:29:48 INFO     Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:29:48,702 - Using `default` preset for Post Hoc Ensemble.
+2025-05-11 20:29:48 INFO     No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:29:48,702 - No categorical_feature_indices given. Assuming no categorical features.
+2025-05-11 20:29:48 INFO     Using task type: binary_classification
+2025-05-11 20:29:48,749 - Using task type: binary_classification
+2025-05-11 20:29:48 INFO     Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:29:48,749 - Obtaining TabPFN models from a random portfolio.
+2025-05-11 20:29:52 INFO     Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:29:52,209 - Using 100 base models: ['default_tabpfn_model_0', 'random_tabpfn_model_1', 'random_rf_pfn_model_2', 'random_rf_pfn_model_3', 'random_rf_pfn_model_4', 'random_rf_pfn_model_5', 'random_tabpfn_model_6', 'random_tabpfn_model_7', 'random_rf_pfn_model_8', 'random_tabpfn_model_9', 'random_rf_pfn_model_10', 'random_rf_pfn_model_11', 'random_tabpfn_model_12', 'random_tabpfn_model_13', 'random_rf_pfn_model_14', 'random_rf_pfn_model_15', 'random_rf_pfn_model_16', 'random_tabpfn_model_17', 'random_rf_pfn_model_18', 'random_tabpfn_model_19', 'random_rf_pfn_model_20', 'random_rf_pfn_model_21', 'random_tabpfn_model_22', 'random_rf_pfn_model_23', 'random_rf_pfn_model_24', 'random_tabpfn_model_25', 'random_rf_pfn_model_26', 'random_tabpfn_model_27', 'random_tabpfn_model_28', 'random_tabpfn_model_29', 'random_tabpfn_model_30', 'random_tabpfn_model_31', 'random_tabpfn_model_32', 'random_tabpfn_model_33', 'random_tabpfn_model_34', 'random_tabpfn_model_35', 'random_rf_pfn_model_36', 'random_tabpfn_model_37', 'random_rf_pfn_model_38', 'random_tabpfn_model_39', 'random_tabpfn_model_40', 'random_rf_pfn_model_41', 'random_tabpfn_model_42', 'random_tabpfn_model_43', 'random_tabpfn_model_44', 'random_tabpfn_model_45', 'random_rf_pfn_model_46', 'random_tabpfn_model_47', 'random_rf_pfn_model_48', 'random_tabpfn_model_49', 'random_tabpfn_model_50', 'random_rf_pfn_model_51', 'random_tabpfn_model_52', 'random_rf_pfn_model_53', 'random_rf_pfn_model_54', 'random_rf_pfn_model_55', 'random_tabpfn_model_56', 'random_tabpfn_model_57', 'random_rf_pfn_model_58', 'random_rf_pfn_model_59', 'random_tabpfn_model_60', 'random_tabpfn_model_61', 'random_rf_pfn_model_62', 'random_tabpfn_model_63', 'random_tabpfn_model_64', 'random_rf_pfn_model_65', 'random_tabpfn_model_66', 'random_tabpfn_model_67', 'random_tabpfn_model_68', 'random_rf_pfn_model_69', 'random_rf_pfn_model_70', 'random_tabpfn_model_71', 'random_tabpfn_model_72', 'random_rf_pfn_model_73', 'random_rf_pfn_model_74', 'random_rf_pfn_model_75', 'random_tabpfn_model_76', 'random_tabpfn_model_77', 'random_tabpfn_model_78', 'random_tabpfn_model_79', 'random_tabpfn_model_80', 'random_rf_pfn_model_81', 'random_rf_pfn_model_82', 'random_tabpfn_model_83', 'random_tabpfn_model_84', 'random_rf_pfn_model_85', 'random_rf_pfn_model_86', 'random_tabpfn_model_87', 'random_rf_pfn_model_88', 'random_tabpfn_model_89', 'random_tabpfn_model_90', 'random_tabpfn_model_91', 'random_rf_pfn_model_92', 'random_rf_pfn_model_93', 'random_tabpfn_model_94', 'random_tabpfn_model_95', 'random_rf_pfn_model_96', 'random_tabpfn_model_97', 'random_tabpfn_model_98', 'random_tabpfn_model_99']
+2025-05-11 20:29:52 INFO     Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:29:52,209 - Starting 80-repeated holdout validation with holdout_frac=0.33.
+2025-05-11 20:29:52 INFO     Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:29:52,209 - Set time limit to 120 seconds. We will early stop validation if needed.
+2025-05-11 20:29:52 INFO     Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:29:52,241 - Yield data for model default_tabpfn_model_0 and split 0 (repeat=1).
+2025-05-11 20:32:15 INFO     Time limit reached.
+2025-05-11 20:32:15,412 - Time limit reached.
+2025-05-11 20:32:15 INFO     Stop validation of all models after 1 models in repeat 1.
+2025-05-11 20:32:15,412 - Stop validation of all models after 1 models in repeat 1.
+2025-05-11 20:32:15 INFO     As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:32:15,412 - As this is the first repeat, we trim down the models to all so-far run models!
+2025-05-11 20:32:15 INFO     Order of selections: [0]
+2025-05-11 20:32:15,428 - Order of selections: [0]
+2025-05-11 20:32:15 INFO     Val loss over iterations: [-0.9139456494679148]
+2025-05-11 20:32:15,428 - Val loss over iterations: [-0.9139456494679148]
+2025-05-11 20:32:15 INFO     Model losses: [-0.91394565]
+2025-05-11 20:32:15,428 - Model losses: [-0.91394565]
+2025-05-11 20:32:15 INFO     Best weights: [1.]
+2025-05-11 20:32:15,428 - Best weights: [1.]
+2025-05-11 20:35:20,385 - MADD - INFO - Accuracy score: 0.8694706308919506
+2025-05-11 20:35:20 INFO     Accuracy score: 0.8694706308919506
+2025-05-11 20:35:20,385 - Accuracy score: 0.8694706308919506
+2025-05-11 20:35:20,385 - MADD - INFO - F-1 score: 0.9097291875626881
+2025-05-11 20:35:20 INFO     F-1 score: 0.9097291875626881
+2025-05-11 20:35:20,385 - F-1 score: 0.9097291875626881
+2025-05-11 20:35:20,385 - MADD - INFO - ==================================================
+2025-05-11 20:35:20 INFO     ==================================================
+2025-05-11 20:35:20,385 - ==================================================
+2025-05-11 20:35:20,385 - MADD - INFO - 
+
+2025-05-11 20:35:20 INFO     
+
+2025-05-11 20:35:20,385 - 
+
