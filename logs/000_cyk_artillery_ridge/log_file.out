@@ -1,0 +1,51 @@
+2025-05-13 13:33:21,173 - MADD - INFO - Dataset: cyk
+2025-05-13 13:33:21,173 - Dataset: cyk
+2025-05-13 13:33:21,173 - MADD - INFO - Target: pIC50
+2025-05-13 13:33:21,173 - Target: pIC50
+2025-05-13 13:33:21,174 - MADD - INFO - Task: regression
+2025-05-13 13:33:21,174 - Task: regression
+2025-05-13 13:33:21,174 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\cyk\cyk_fp_processed.csv
+2025-05-13 13:33:21,174 - Data path: C:\Users\user\Desktop\madd_automl\data\cyk\cyk_fp_processed.csv
+2025-05-13 13:33:21,174 - MADD - INFO - Save path: logs\cyk
+2025-05-13 13:33:21,174 - Save path: logs\cyk
+2025-05-13 13:33:21,174 - MADD - INFO - ==================================================
+2025-05-13 13:33:21,174 - ==================================================
+2025-05-13 13:33:22,467 - Topological features operation requires extra dependencies for time series forecasting, which are not installed. It can infuence the performance. Please install it by 'pip install fedot[extra]'
+2025-05-13 13:37:07,734 - ApiComposer - Initial pipeline was fitted in 217.9 sec.
+2025-05-13 13:37:07,734 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 1089.6 sec.
+2025-05-13 13:37:07,734 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-13 13:37:07,749 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 60 min. Set of candidate models: ['adareg', 'cbreg_bag', 'knnreg', 'lasso', 'lgbmreg_bag', 'linear', 'normalization', 'pca', 'rfr', 'ridge', 'scaling', 'xgbreg_bag'].
+2025-05-13 13:37:07,796 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 1089.55481 sec.
+2025-05-13 13:37:07,796 - ApiComposer - Hyperparameters tuning started with 56 min. timeout
+2025-05-13 13:55:55,875 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [ridge, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+ridge - {}
+cbreg_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgbreg_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbmreg_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [9.223372036854776e+18]
+  0%|          | 0/100000 [00:00<?, ?trial/s, best loss=?]  0%|          | 1/100000 [20:12<33676:34:58, 1212.37s/trial, best loss: 9.223372036854776e+18]  0%|          | 2/100000 [40:15<33520:14:04, 1206.75s/trial, best loss: 9.223372036854776e+18]  0%|          | 2/100000 [40:15<33543:39:01, 1207.60s/trial, best loss: 9.223372036854776e+18]
+2025-05-13 14:55:54,295 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [ridge, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+ridge - {}
+cbreg_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgbreg_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbmreg_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-13 14:55:54,296 - SimultaneousTuner - Final metric: 9223372036854775808.000
+2025-05-13 14:55:54,300 - ApiComposer - Hyperparameters tuning finished
+2025-05-13 14:55:54,416 - ApiComposer - Model generation finished
+2025-05-13 15:00:01,263 - FEDOT logger - Final pipeline was fitted
+2025-05-13 15:00:01,263 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [ridge, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+ridge - {}
+cbreg_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgbreg_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbmreg_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-13 15:00:02,318 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [ridge, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+2025-05-13 15:00:02,926 - MADD - INFO - MAE score: 0.4634562243419212
+2025-05-13 15:00:02,926 - MADD - INFO - MSE score: 0.40317126606484904
+2025-05-13 15:00:02,926 - MADD - INFO - R2 score: 0.6893805798912132
+2025-05-13 15:00:03,181 - MADD - INFO - Pipeline saved to logs\cyk
+
+2025-05-13 15:00:03,181 - MADD - INFO - ==================================================

@@ -86,8 +86,8 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
         pop_size=100000000000000000000000000000000,
         initial_assumption=PipelineBuilder() \
         .add_node('scaling')
-        .add_branch('catboostreg', 'xgboostreg', 'lgbmreg')
-        .join_branches('ridge').build()
+        .add_branch('cbreg_bag', 'xgbreg_bag', 'lgbmreg_bag')
+        .join_branches('blendreg').build()
     )
 
     model.fit(X_train, y_train)
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     run_experiment(
         target='pIC50', task='regression',
         data_path=cyk_path, save_name=name,
-        time=60
+        time=5  # в тот раз для блендинга тяжелого ансамбля вроде 5 минут было
     )
 
-    # nohup python main_experiments.py > log_file.out &
+    # nohup python cyk_experiments.py > log_file.out &

@@ -1,0 +1,75 @@
+2025-05-13 15:14:45,553 - MADD - INFO - Dataset: cyk
+2025-05-13 15:14:45,553 - Dataset: cyk
+2025-05-13 15:14:45,554 - MADD - INFO - Target: pIC50
+2025-05-13 15:14:45,554 - Target: pIC50
+2025-05-13 15:14:45,554 - MADD - INFO - Task: regression
+2025-05-13 15:14:45,554 - Task: regression
+2025-05-13 15:14:45,554 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\cyk\cyk_fp_processed.csv
+2025-05-13 15:14:45,554 - Data path: C:\Users\user\Desktop\madd_automl\data\cyk\cyk_fp_processed.csv
+2025-05-13 15:14:45,554 - MADD - INFO - Save path: logs\cyk
+2025-05-13 15:14:45,554 - Save path: logs\cyk
+2025-05-13 15:14:45,555 - MADD - INFO - ==================================================
+2025-05-13 15:14:45,555 - ==================================================
+2025-05-13 15:14:46,122 - Topological features operation requires extra dependencies for time series forecasting, which are not installed. It can infuence the performance. Please install it by 'pip install fedot[extra]'
+2025-05-13 15:18:36,233 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:18:37,070 - Blending - Models weights: {'cbreg_bag': 0.514086, 'lgbmreg_bag': 0.001081, 'xgbreg_bag': 0.484833}
+2025-05-13 15:18:39,377 - ApiComposer - Initial pipeline was fitted in 225.6 sec.
+2025-05-13 15:18:39,377 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 1128.2 sec.
+2025-05-13 15:18:39,377 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-13 15:18:39,393 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 5 min. Set of candidate models: ['adareg', 'cbreg_bag', 'knnreg', 'lasso', 'lgbmreg_bag', 'linear', 'normalization', 'pca', 'rfr', 'ridge', 'scaling', 'xgbreg_bag'].
+2025-05-13 15:18:39,440 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 1128.167625 sec.
+2025-05-13 15:18:39,440 - ApiComposer - Hyperparameters tuning started with 1 min. timeout
+2025-05-13 15:22:23,907 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:22:24,855 - Blending - Models weights: {'cbreg_bag': 0.428505, 'lgbmreg_bag': 0.006257, 'xgbreg_bag': 0.565238}
+2025-05-13 15:26:14,408 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:26:15,320 - Blending - Models weights: {'cbreg_bag': 0.480951, 'lgbmreg_bag': 0.000111, 'xgbreg_bag': 0.518938}
+2025-05-13 15:30:05,915 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:30:06,819 - Blending - Models weights: {'cbreg_bag': 0.511535, 'lgbmreg_bag': 0.00099, 'xgbreg_bag': 0.487475}
+2025-05-13 15:33:57,333 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:33:58,240 - Blending - Models weights: {'cbreg_bag': 0.428505, 'lgbmreg_bag': 0.006257, 'xgbreg_bag': 0.565238}
+2025-05-13 15:37:47,848 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:37:48,755 - Blending - Models weights: {'cbreg_bag': 0.511818, 'lgbmreg_bag': 9.9e-05, 'xgbreg_bag': 0.488083}
+2025-05-13 15:37:51,011 - SimultaneousTuner - Initial graph: {'depth': 3, 'length': 5, 'nodes': [blendreg, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+blendreg - {}
+cbreg_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgbreg_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbmreg_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1} 
+Initial metric: [9.223372036854776e+18]
+2025-05-13 15:37:51,011 - SimultaneousTuner - Graph "{'depth': 3, 'length': 5, 'nodes': [blendreg, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}" has no parameters to optimize
+2025-05-13 15:41:41,872 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:41:42,797 - Blending - Models weights: {'cbreg_bag': 0.428505, 'lgbmreg_bag': 0.006257, 'xgbreg_bag': 0.565238}
+2025-05-13 15:45:35,560 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:45:36,461 - Blending - Models weights: {'cbreg_bag': 0.480951, 'lgbmreg_bag': 0.000111, 'xgbreg_bag': 0.518938}
+2025-05-13 15:49:28,467 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:49:29,382 - Blending - Models weights: {'cbreg_bag': 0.511535, 'lgbmreg_bag': 0.00099, 'xgbreg_bag': 0.487475}
+2025-05-13 15:53:21,231 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:53:22,143 - Blending - Models weights: {'cbreg_bag': 0.428505, 'lgbmreg_bag': 0.006257, 'xgbreg_bag': 0.565238}
+2025-05-13 15:57:14,371 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 15:57:15,285 - Blending - Models weights: {'cbreg_bag': 0.511818, 'lgbmreg_bag': 9.9e-05, 'xgbreg_bag': 0.488083}
+2025-05-13 15:57:17,582 - SimultaneousTuner - Final graph: {'depth': 3, 'length': 5, 'nodes': [blendreg, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+blendreg - {}
+cbreg_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgbreg_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbmreg_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-13 15:57:17,582 - SimultaneousTuner - Final metric: 9223372036854775808.000
+2025-05-13 15:57:17,582 - ApiComposer - Hyperparameters tuning finished
+2025-05-13 15:57:17,689 - ApiComposer - Model generation finished
+2025-05-13 16:01:22,296 - Blending - Starting weights optimization for models: ['cbreg_bag', 'lgbmreg_bag', 'xgbreg_bag']. Obtained metric - mean_squared_error.
+2025-05-13 16:01:23,125 - Blending - Models weights: {'cbreg_bag': 0.428505, 'lgbmreg_bag': 0.006257, 'xgbreg_bag': 0.565238}
+2025-05-13 16:01:23,125 - FEDOT logger - Final pipeline was fitted
+2025-05-13 16:01:23,125 - FEDOT logger - Final pipeline: {'depth': 3, 'length': 5, 'nodes': [blendreg, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+blendreg - {}
+cbreg_bag - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False}
+scaling - {}
+xgbreg_bag - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True}
+lgbmreg_bag - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'n_jobs': 16, 'verbose': -1}
+2025-05-13 16:01:24,156 - MADD - INFO - Model graph description:
+{'depth': 3, 'length': 5, 'nodes': [blendreg, cbreg_bag, scaling, xgbreg_bag, lgbmreg_bag]}
+2025-05-13 16:01:24,592 - MADD - INFO - MAE score: 0.44782623936422317
+2025-05-13 16:01:24,593 - MADD - INFO - MSE score: 0.3702709356295417
+2025-05-13 16:01:24,593 - MADD - INFO - R2 score: 0.714728322702723
+2025-05-13 16:01:24,858 - MADD - INFO - Pipeline saved to logs\cyk
+
+2025-05-13 16:01:24,858 - MADD - INFO - ==================================================
