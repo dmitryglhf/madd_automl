@@ -118,7 +118,7 @@ if __name__ == '__main__':
     run_experiment(
         target='pIC50', task='regression',
         data_path=cyk_path, save_name=name,
-        time=5  # в тот раз для блендинга тяжелого ансамбля вроде 5 минут было
+        time=60  # в тот раз для блендинга тяжелого ансамбля вроде 5 минут было
     )
 
     # nohup python cyk_experiments.py > log_file.out &

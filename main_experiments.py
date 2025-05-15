@@ -70,12 +70,11 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
     logger.info(f"Task: {task}")
     logger.info(f"Data path: {data_path}")
     logger.info(f"Save path: {path_to_save}")
-    logger.info("Disbalance of classes:")
 
     df_ds = pd.read_csv(data_path)
     logger.info(f"{df_ds[target].value_counts(normalize=True)}")
 
-    logger.info('-' * 50)
+    logger.info('=' * 50)
 
 
     X, y = df_ds.drop(columns=target), df_ds[target]
@@ -85,10 +84,13 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
     model = Fedot(
         problem=task,
         seed=SEED,
+        preset="best_quality",
         timeout=time,
+        metric=['accuracy', 'f1'],
         n_jobs=-1,
         with_tuning=True,
-        pop_size=100000000000000000000000000000000,
+        cv_folds=5,
+        pop_size=10,
         initial_assumption=PipelineBuilder() \
         .add_node('scaling')
         .add_branch('catboost', 'xgboost', 'lgbm')
@@ -114,14 +116,13 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
     pipeline.save(path=path_to_save, create_subdir=True, is_datetime_in_path=False)
     logger.info(f'Pipeline saved to {path_to_save}\n')
     logger.info('='*50)
-    logger.info('\n')
 
 
 if __name__ == '__main__':
     data_512 = [
         r"C:\Users\user\Desktop\madd_automl\data\512_data\alz_512.csv",
         r"C:\Users\user\Desktop\madd_automl\data\512_data\cancer_clear_512.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\512_data\dislip_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\dyslipedemia_512.csv",
         r"C:\Users\user\Desktop\madd_automl\data\512_data\parkinson_512.csv",
         r"C:\Users\user\Desktop\madd_automl\data\512_data\resistance_512.csv",
         r"C:\Users\user\Desktop\madd_automl\data\512_data\skl_512.csv",
@@ -143,15 +144,26 @@ if __name__ == '__main__':
         r"C:\Users\user\Desktop\madd_automl\data\2048_data\skl_2048.csv",
     ]
 
-    full_data = [data_1024, data_2048]
-    for part_data in full_data:
-        for data in part_data:
-            name = Path(data).stem
-            run_experiment(
-                target='IC50', task='classification',
-                data_path=data, save_name=name,
-                # time=5
-                time=60
-            )
+    data = [
+        r"C:\Users\user\Desktop\madd_automl\data\dislip_resist_park\parkinson_processed_no_ipc.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\parkinson_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\1024_data\parkinson_1024.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\2048_data\parkinson_2048.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\dislip_resist_park\dyslipedemia_processed.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\dyslipedemia_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\1024_data\dyslipedemia_1024.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\2048_data\dyslipedemia_2048.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\512_data\cancer_clear_512.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\1024_data\cancer_clear_1024.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\2048_data\cancer_clear_2048.csv",
+    ]
+
+    for dt in data:
+        name = Path(dt).stem
+        run_experiment(
+            target='IC50', task='classification',
+            data_path=dt, save_name=name,
+            time=60
+        )
 
     # nohup python main_experiments.py > log_file.out &
