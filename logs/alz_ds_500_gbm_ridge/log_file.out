@@ -1,0 +1,32 @@
+2025-05-16 20:59:31,391 - MADD - INFO - Dataset: alz_ds_500
+2025-05-16 20:59:31,391 - Dataset: alz_ds_500
+2025-05-16 20:59:31,391 - MADD - INFO - Target: docking_score
+2025-05-16 20:59:31,391 - Target: docking_score
+2025-05-16 20:59:31,391 - MADD - INFO - Task: regression
+2025-05-16 20:59:31,391 - Task: regression
+2025-05-16 20:59:31,391 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\500k_alz\alz_ds_500_final_1024.csv
+2025-05-16 20:59:31,391 - Data path: C:\Users\user\Desktop\madd_automl\data\500k_alz\alz_ds_500_final_1024.csv
+2025-05-16 20:59:31,391 - MADD - INFO - Save path: logs\alz_ds_500
+2025-05-16 20:59:31,391 - Save path: logs\alz_ds_500
+2025-05-16 20:59:42,626 - MADD - INFO - ==================================================
+2025-05-16 20:59:42,626 - ==================================================
+2025-05-16 21:17:43,227 - ApiComposer - Initial pipeline was fitted in 610.6 sec.
+2025-05-16 21:17:43,227 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 3052.9 sec.
+2025-05-16 21:17:43,227 - AssumptionsHandler - Preset was changed to best_quality due to fit time estimation for initial model.
+2025-05-16 21:17:43,430 - ApiComposer - AutoML configured. Parameters tuning: False. Time limit: 480 min. Set of candidate models: ['adareg', 'catboostreg', 'dtreg', 'fast_ica', 'isolation_forest_reg', 'knnreg', 'lasso', 'lgbmreg', 'linear', 'normalization', 'pca', 'poly_features', 'ransac_lin_reg', 'ransac_non_lin_reg', 'rfr', 'ridge', 'scaling', 'sgdr', 'svr', 'xgboostreg'].
+2025-05-16 21:17:43,446 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 3052.893115 sec.
+2025-05-16 21:17:43,602 - ApiComposer - Model generation finished
+2025-05-16 21:20:29,010 - FEDOT logger - Already fitted initial pipeline is used
+2025-05-16 21:20:29,010 - FEDOT logger - Final pipeline: {'depth': 2, 'length': 4, 'nodes': [ridge, catboostreg, xgboostreg, lgbmreg]}
+ridge - {}
+catboostreg - {'n_jobs': 16, 'num_trees': 3000, 'learning_rate': 0.03, 'l2_leaf_reg': 0.01, 'bootstrap_type': 'Bernoulli', 'grow_policy': 'SymmetricTree', 'max_depth': 5, 'min_data_in_leaf': 1, 'one_hot_max_size': 10, 'fold_permutation_block': 1, 'boosting_type': 'Plain', 'od_type': 'Iter', 'od_wait': 100, 'max_bin': 32, 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Min', 'verbose': False, 'allow_writing_files': False, 'use_eval_set': True, 'use_best_model': True, 'enable_categorical': True}
+xgboostreg - {'n_jobs': 16, 'verbosity': 0, 'booster': 'gbtree', 'tree_method': 'auto', 'enable_categorical': True, 'use_eval_set': True, 'early_stopping_rounds': 30}
+lgbmreg - {'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.85, 'extra_trees': False, 'enable_categorical': True, 'use_eval_set': True, 'early_stopping_rounds': 30, 'n_jobs': 16, 'verbose': -1}
+2025-05-16 21:20:36,614 - MADD - INFO - Model graph description:
+{'depth': 2, 'length': 4, 'nodes': [ridge, catboostreg, xgboostreg, lgbmreg]}
+2025-05-16 21:20:37,157 - MADD - INFO - MAE score: 0.9539423507243386
+2025-05-16 21:20:37,157 - MADD - INFO - MSE score: 1.8342548912374874
+2025-05-16 21:20:37,157 - MADD - INFO - R2 score: 0.3448546811377492
+2025-05-16 21:20:37,266 - MADD - INFO - Pipeline saved to logs\alz_ds_500
+
+2025-05-16 21:20:37,266 - MADD - INFO - ==================================================

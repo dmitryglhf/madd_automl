@@ -1,0 +1,207 @@
+{
+    "total_pipeline_operations": [
+        "rf",
+        "scaling",
+        "lgbm",
+        "pca",
+        "logit"
+    ],
+    "depth": 3,
+    "nodes": [
+        {
+            "operation_id": 1,
+            "operation_type": "rf",
+            "operation_name": "RandomForestClassifier",
+            "custom_params": {
+                "n_jobs": 16,
+                "bootstrap": false,
+                "criterion": "gini",
+                "max_features": 0.09728860352529799,
+                "min_samples_leaf": 3,
+                "min_samples_split": 8
+            },
+            "params": {
+                "n_jobs": 16,
+                "bootstrap": false,
+                "criterion": "gini",
+                "max_features": 0.09728860352529799,
+                "min_samples_leaf": 3,
+                "min_samples_split": 8
+            },
+            "nodes_from": [],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_1.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 3,
+            "operation_type": "scaling",
+            "operation_name": "ScalingImplementation",
+            "custom_params": {},
+            "params": {},
+            "nodes_from": [],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_3.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 2,
+            "operation_type": "lgbm",
+            "operation_name": "FedotLightGBMClassificationImplementation",
+            "custom_params": {
+                "boosting_type": "gbdt",
+                "max_depth": -1,
+                "bagging_fraction": 0.03659840147432037,
+                "extra_trees": false,
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 29,
+                "n_jobs": 16,
+                "verbose": -1,
+                "class_weight": "balanced",
+                "num_leaves": 144,
+                "min_data_in_leaf": 45,
+                "learning_rate": 0.010246333953637537,
+                "force_col_wise": false,
+                "force_row_wise ": true,
+                "colsample_bytree": 0.501230783378508,
+                "subsample": 0.8404655684586245,
+                "reg_alpha": 0.00016573350269964197,
+                "reg_lambda": 1.1064816659772683e-08
+            },
+            "params": {
+                "boosting_type": "gbdt",
+                "max_depth": -1,
+                "bagging_fraction": 0.03659840147432037,
+                "extra_trees": false,
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 29,
+                "n_jobs": 16,
+                "verbose": -1,
+                "class_weight": "balanced",
+                "num_leaves": 144,
+                "min_data_in_leaf": 45,
+                "learning_rate": 0.010246333953637537,
+                "force_col_wise": false,
+                "force_row_wise ": true,
+                "colsample_bytree": 0.501230783378508,
+                "subsample": 0.8404655684586245,
+                "reg_alpha": 0.00016573350269964197,
+                "reg_lambda": 1.1064816659772683e-08
+            },
+            "nodes_from": [
+                3
+            ],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_2.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 5,
+            "operation_type": "lgbm",
+            "operation_name": "FedotLightGBMClassificationImplementation",
+            "custom_params": {
+                "boosting_type": "gbdt",
+                "max_depth": -1,
+                "bagging_fraction": 0.03448877458295541,
+                "extra_trees": false,
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 49,
+                "n_jobs": 16,
+                "verbose": -1,
+                "class_weight": "balanced",
+                "num_leaves": 48,
+                "min_data_in_leaf": 40,
+                "learning_rate": 0.020315370858820434,
+                "force_col_wise": false,
+                "force_row_wise ": true,
+                "colsample_bytree": 0.5043796879082064,
+                "subsample": 0.9446570780321697,
+                "reg_alpha": 7.123138561620986e-06,
+                "reg_lambda": 4.238333750160708e-05
+            },
+            "params": {
+                "boosting_type": "gbdt",
+                "max_depth": -1,
+                "bagging_fraction": 0.03448877458295541,
+                "extra_trees": false,
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 49,
+                "n_jobs": 16,
+                "verbose": -1,
+                "class_weight": "balanced",
+                "num_leaves": 48,
+                "min_data_in_leaf": 40,
+                "learning_rate": 0.020315370858820434,
+                "force_col_wise": false,
+                "force_row_wise ": true,
+                "colsample_bytree": 0.5043796879082064,
+                "subsample": 0.9446570780321697,
+                "reg_alpha": 7.123138561620986e-06,
+                "reg_lambda": 4.238333750160708e-05
+            },
+            "nodes_from": [],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_5.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 4,
+            "operation_type": "pca",
+            "operation_name": "PCAImplementation",
+            "custom_params": {
+                "svd_solver": "full",
+                "n_components": 0.6469874231054074
+            },
+            "params": {
+                "svd_solver": "full",
+                "n_components": 0.6469874231054074
+            },
+            "nodes_from": [
+                5
+            ],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_4.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 0,
+            "operation_type": "logit",
+            "operation_name": "LogisticRegression",
+            "custom_params": {
+                "C": 3.640061025536224
+            },
+            "params": {
+                "C": 3.640061025536224
+            },
+            "nodes_from": [
+                1,
+                2,
+                4
+            ],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_0.pkl"
+            ],
+            "rating": null
+        }
+    ],
+    "preprocessing": [
+        "preprocessing",
+        "data_preprocessor.pkl"
+    ],
+    "descriptive_id": "((/n_lgbm_{'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.03448877458295541, 'extra_trees': False, 'enable_categorical': True, 'use_eval_set': True, 'early_stopping_rounds': 49, 'n_jobs': 16, 'verbose': -1, 'class_weight': 'balanced', 'num_leaves': 48, 'min_data_in_leaf': 40, 'learning_rate': 0.020315370858820434, 'force_col_wise': False, 'force_row_wise ': True, 'colsample_bytree': 0.5043796879082064, 'subsample': 0.9446570780321697, 'reg_alpha': 7.123138561620986e-06, 'reg_lambda': 4.238333750160708e-05};)/n_pca_{'svd_solver': 'full', 'n_components': 0.6469874231054074};;(/n_scaling;)/n_lgbm_{'boosting_type': 'gbdt', 'max_depth': -1, 'bagging_fraction': 0.03659840147432037, 'extra_trees': False, 'enable_categorical': True, 'use_eval_set': True, 'early_stopping_rounds': 29, 'n_jobs': 16, 'verbose': -1, 'class_weight': 'balanced', 'num_leaves': 144, 'min_data_in_leaf': 45, 'learning_rate': 0.010246333953637537, 'force_col_wise': False, 'force_row_wise ': True, 'colsample_bytree': 0.501230783378508, 'subsample': 0.8404655684586245, 'reg_alpha': 0.00016573350269964197, 'reg_lambda': 1.1064816659772683e-08};;/n_rf_{'n_jobs': 16, 'bootstrap': False, 'criterion': 'gini', 'max_features': 0.09728860352529799, 'min_samples_leaf': 3, 'min_samples_split': 8};)/n_logit_{'C': 3.640061025536224}"
+}

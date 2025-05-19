@@ -72,29 +72,22 @@ def run_experiment(target: str, task: str, data_path: str, save_name: str, time=
     logger.info(f"Save path: {path_to_save}")
 
     df_ds = pd.read_csv(data_path)
-    logger.info(f"{df_ds[target].value_counts(normalize=True)}")
 
     logger.info('=' * 50)
 
 
     X, y = df_ds.drop(columns=target), df_ds[target]
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.3, random_state=SEED)
+        X, y, test_size=0.2, random_state=SEED)
 
     model = Fedot(
         problem=task,
         seed=SEED,
-        preset="best_quality",
+        # preset="auto",
         timeout=time,
-        metric=['accuracy', 'f1'],
+        metric='mae',
         n_jobs=-1,
         with_tuning=True,
-        cv_folds=5,
-        pop_size=10,
-        initial_assumption=PipelineBuilder() \
-        .add_node('scaling')
-        .add_branch('catboost', 'xgboost', 'lgbm')
-        .join_branches('logit').build()
     )
 
     model.fit(X_train, y_train)
@@ -145,25 +138,13 @@ if __name__ == '__main__':
     ]
 
     data = [
-        r"C:\Users\user\Desktop\madd_automl\data\dislip_resist_park\parkinson_processed_no_ipc.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\512_data\parkinson_512.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\1024_data\parkinson_1024.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\2048_data\parkinson_2048.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\dislip_resist_park\dyslipedemia_processed.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\512_data\dyslipedemia_512.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\1024_data\dyslipedemia_1024.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\2048_data\dyslipedemia_2048.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\512_data\cancer_clear_512.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\1024_data\cancer_clear_1024.csv",
-        r"C:\Users\user\Desktop\madd_automl\data\2048_data\cancer_clear_2048.csv",
+        r"C:\Users\user\Desktop\madd_automl\data\500k_alz\alz_ds_500_final_1024.csv",
     ]
 
-    for dt in data:
-        name = Path(dt).stem
-        run_experiment(
-            target='IC50', task='classification',
-            data_path=dt, save_name=name,
-            time=60
-        )
+    run_experiment(
+        target='docking_score', task='regression',
+        data_path=data[0], save_name='alz_ds_500',
+        time=60*20
+    )
 
     # nohup python main_experiments.py > log_file.out &

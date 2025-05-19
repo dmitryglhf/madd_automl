@@ -1,0 +1,41 @@
+2025-05-16 13:35:18,368 - MADD - INFO - Dataset: alz_ds_500
+2025-05-16 13:35:18,368 - Dataset: alz_ds_500
+2025-05-16 13:35:18,368 - MADD - INFO - Target: docking_score
+2025-05-16 13:35:18,368 - Target: docking_score
+2025-05-16 13:35:18,368 - MADD - INFO - Task: regression
+2025-05-16 13:35:18,368 - Task: regression
+2025-05-16 13:35:18,384 - MADD - INFO - Data path: C:\Users\user\Desktop\madd_automl\data\500k_alz\alz_ds_500_final_1024.csv
+2025-05-16 13:35:18,384 - Data path: C:\Users\user\Desktop\madd_automl\data\500k_alz\alz_ds_500_final_1024.csv
+2025-05-16 13:35:18,384 - MADD - INFO - Save path: logs\alz_ds_500
+2025-05-16 13:35:18,384 - Save path: logs\alz_ds_500
+2025-05-16 13:35:29,539 - MADD - INFO - ==================================================
+2025-05-16 13:35:29,539 - ==================================================
+2025-05-16 14:58:51,974 - ApiComposer - Initial pipeline was fitted in 4535.1 sec.
+2025-05-16 14:58:51,983 - ApiComposer - Taking into account n_folds=5, estimated fit time for initial assumption is 22675.3 sec.
+2025-05-16 14:58:51,983 - AssumptionsHandler - Preset was changed to fast_train due to fit time estimation for initial model.
+2025-05-16 14:58:52,264 - ApiComposer - AutoML configured. Parameters tuning: True. Time limit: 180 min. Set of candidate models: ['adareg', 'dtreg', 'knnreg', 'lasso', 'linear', 'normalization', 'pca', 'ransac_lin_reg', 'rfr', 'ridge', 'scaling', 'sgdr'].
+2025-05-16 14:58:52,296 - ApiComposer - Timeout is too small for composing and is skipped because fit_time is 22675.308065 sec.
+2025-05-16 14:58:52,311 - ApiComposer - Hyperparameters tuning started with 104 min. timeout
+2025-05-16 16:34:28,930 - SimultaneousTuner - Initial graph: {'depth': 2, 'length': 2, 'nodes': [rfr, scaling]}
+rfr - {'n_jobs': 16}
+scaling - {} 
+Initial metric: [0.86]
+  0%|          | 0/100000 [00:00<?, ?trial/s, best loss=?]  0%|          | 1/100000 [1:36:42<161182:27:28, 5802.63s/trial, best loss: 0.8582486192831926]  0%|          | 1/100000 [1:36:42<161182:53:31, 5802.64s/trial, best loss: 0.8582486192831926]
+2025-05-16 19:44:18,780 - SimultaneousTuner - Final graph: {'depth': 2, 'length': 2, 'nodes': [rfr, scaling]}
+rfr - {'n_jobs': 16, 'bootstrap': False, 'max_features': 0.5418003271933763, 'min_samples_leaf': 6, 'min_samples_split': 7}
+scaling - {}
+2025-05-16 19:44:18,780 - SimultaneousTuner - Final metric: 0.858
+2025-05-16 19:44:18,780 - ApiComposer - Hyperparameters tuning finished
+2025-05-16 19:44:18,967 - ApiComposer - Model generation finished
+2025-05-16 20:09:20,680 - FEDOT logger - Final pipeline was fitted
+2025-05-16 20:09:20,680 - FEDOT logger - Final pipeline: {'depth': 2, 'length': 2, 'nodes': [rfr, scaling]}
+rfr - {'n_jobs': 16, 'bootstrap': False, 'max_features': 0.5418003271933763, 'min_samples_leaf': 6, 'min_samples_split': 7}
+scaling - {}
+2025-05-16 20:09:32,998 - MADD - INFO - Model graph description:
+{'depth': 2, 'length': 2, 'nodes': [rfr, scaling]}
+2025-05-16 20:09:34,658 - MADD - INFO - MAE score: 0.8487415922873476
+2025-05-16 20:09:34,658 - MADD - INFO - MSE score: 1.599900078740459
+2025-05-16 20:09:34,658 - MADD - INFO - R2 score: 0.4285597643809428
+2025-05-16 20:09:34,924 - MADD - INFO - Pipeline saved to logs\alz_ds_500
+
+2025-05-16 20:09:34,924 - MADD - INFO - ==================================================

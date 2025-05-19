@@ -1,0 +1,105 @@
+{
+    "total_pipeline_operations": [
+        "scaling",
+        "xgboost",
+        "rf"
+    ],
+    "depth": 3,
+    "nodes": [
+        {
+            "operation_id": 2,
+            "operation_type": "scaling",
+            "operation_name": "ScalingImplementation",
+            "custom_params": {},
+            "params": {},
+            "nodes_from": [],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_2.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 1,
+            "operation_type": "xgboost",
+            "operation_name": "FedotXGBoostClassificationImplementation",
+            "custom_params": {
+                "n_jobs": 16,
+                "verbosity": 0,
+                "booster": "gblinear",
+                "tree_method": "auto",
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 30,
+                "max_depth": 4,
+                "learning_rate": 0.007054528564829,
+                "subsample": 0.168933336131891,
+                "min_child_weight": 3,
+                "lambda": 629,
+                "alpha": 492,
+                "colsample_bytree": 0.6011844315141704,
+                "scale_pos_weight": 17
+            },
+            "params": {
+                "n_jobs": 16,
+                "verbosity": 0,
+                "booster": "gblinear",
+                "tree_method": "auto",
+                "enable_categorical": true,
+                "use_eval_set": true,
+                "early_stopping_rounds": 30,
+                "max_depth": 4,
+                "learning_rate": 0.007054528564829,
+                "subsample": 0.168933336131891,
+                "min_child_weight": 3,
+                "lambda": 629,
+                "alpha": 492,
+                "colsample_bytree": 0.6011844315141704,
+                "scale_pos_weight": 17
+            },
+            "nodes_from": [
+                2
+            ],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_1.pkl"
+            ],
+            "rating": null
+        },
+        {
+            "operation_id": 0,
+            "operation_type": "rf",
+            "operation_name": "RandomForestClassifier",
+            "custom_params": {
+                "n_jobs": 16,
+                "bootstrap": true,
+                "criterion": "entropy",
+                "max_features": 0.6574236753837787,
+                "min_samples_leaf": 2,
+                "min_samples_split": 3
+            },
+            "params": {
+                "n_jobs": 16,
+                "bootstrap": true,
+                "criterion": "entropy",
+                "max_features": 0.6574236753837787,
+                "min_samples_leaf": 2,
+                "min_samples_split": 3
+            },
+            "nodes_from": [
+                1,
+                2
+            ],
+            "fitted_operation_path": [
+                "fitted_operations",
+                "operation_0.pkl"
+            ],
+            "rating": null
+        }
+    ],
+    "preprocessing": [
+        "preprocessing",
+        "data_preprocessor.pkl"
+    ],
+    "descriptive_id": "((/n_scaling;)/n_xgboost_{'n_jobs': 16, 'verbosity': 0, 'booster': 'gblinear', 'tree_method': 'auto', 'enable_categorical': True, 'use_eval_set': True, 'early_stopping_rounds': 30, 'max_depth': 4, 'learning_rate': 0.007054528564829, 'subsample': 0.168933336131891, 'min_child_weight': 3, 'lambda': 629, 'alpha': 492, 'colsample_bytree': 0.6011844315141704, 'scale_pos_weight': 17};;/n_scaling;)/n_rf_{'n_jobs': 16, 'bootstrap': True, 'criterion': 'entropy', 'max_features': 0.6574236753837787, 'min_samples_leaf': 2, 'min_samples_split': 3}"
+}
